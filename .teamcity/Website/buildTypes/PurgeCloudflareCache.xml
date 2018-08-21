@@ -3,6 +3,9 @@
   <name>Purge Cloudflare Cache</name>
   <description>Build configuration created from meta-runner PurgeCloudflareCache</description>
   <settings>
+    <options>
+      <option name="shouldFailBuildOnAnyErrorMessage" value="true" />
+    </options>
     <parameters>
       <param name="CloudflareApiKey" value="credentialsJSON:0101593a-611c-4279-aea9-67abeaed298a" spec="password display='prompt' orderNumber='1.0'" />
     </parameters>
