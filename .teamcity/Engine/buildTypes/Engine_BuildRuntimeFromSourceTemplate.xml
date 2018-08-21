@@ -7,6 +7,7 @@
     </options>
     <parameters>
       <param name="BuildLogFile" value="BuildLog.Log" />
+      <param name="MSBuildLogClause" value="/l:FileLogger,Microsoft.Build.Engine;logfile=%BuildLogFile%;Append" />
       <param name="env.XenkoDisableAssetCompilerExecServerProxy" value="true" />
     </parameters>
     <build-runners>
