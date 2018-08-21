@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <meta-runner name="Purge Cloudflare Cache">
-  <description>Purge Cloudflare Cache</description>
+  <description>Build configuration created from meta-runner PurgeCloudflareCache</description>
   <settings>
     <parameters>
       <param name="CloudflareApiKey" value="credentialsJSON:0101593a-611c-4279-aea9-67abeaed298a" spec="password display='prompt' orderNumber='1.0'" />
@@ -8,6 +8,7 @@
     <build-runners>
       <runner name="Purge Cloudflare Cache" type="jetbrains_powershell">
         <parameters>
+          <param name="jetbrains_powershell_errorToError" value="true" />
           <param name="jetbrains_powershell_execution" value="PS1" />
           <param name="jetbrains_powershell_noprofile" value="true" />
           <param name="jetbrains_powershell_script_code"><![CDATA[[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
