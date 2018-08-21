@@ -6,6 +6,7 @@
       <option name="allowExternalStatus" value="true" />
     </options>
     <parameters>
+      <param name="BuildLogFile" value="BuildLog.Log" />
       <param name="env.XenkoDisableAssetCompilerExecServerProxy" value="true" />
     </parameters>
     <build-runners>
