@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="007fc9c9-a544-4cc7-aa25-d8ff5668af1d" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Run Samples NVIDIA</name>
+  <description />
+  <settings>
+    <options>
+      <option name="artifactRules" value="screenshots\*.png =&gt; screenshots-Nvidia-%build.number%.zip" />
+    </options>
+    <parameters />
+    <build-runners>
+      <runner id="RUNNER_19" name="Setup folders and extract package" type="simpleRunner">
+        <parameters>
+          <param name="script.content"><![CDATA[mkdir build
+echo "null" > build\Xenko.sln
+mkdir screenshots
+xcopy /Y C:\VSLibs\*.dll samples\Others\NativeLinking\Bin\Windows\Debug\
+cd tools
+packageinstall.exe /extract]]></param>
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_20" name="Kill ADB and Start Connection Router" type="jetbrains_powershell">
+        <parameters>
+          <param name="jetbrains_powershell_execution" value="PS1" />
+          <param name="jetbrains_powershell_noprofile" value="true" />
+          <param name="jetbrains_powershell_script_code"><![CDATA[adb kill-server
+sleep 2
+taskkill /IM SiliconStudio.Xenko.ConnectionRouter.exe /f
+sleep 2
+start Bin\Windows\SiliconStudio.Xenko.ConnectionRouter.exe
+sleep 2]]></param>
+          <param name="jetbrains_powershell_script_mode" value="CODE" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_21" name="" type="NUnit">
+        <parameters>
+          <param name="dotNetCoverage.NCover.HTMLReport.File.Sort" value="0" />
+          <param name="dotNetCoverage.NCover.HTMLReport.File.Type" value="1" />
+          <param name="dotNetCoverage.NCover.Reg" value="selected" />
+          <param name="dotNetCoverage.NCover.platformBitness" value="x86" />
+          <param name="dotNetCoverage.NCover.platformVersion" value="v2.0" />
+          <param name="dotNetCoverage.NCover3.Reg" value="selected" />
+          <param name="dotNetCoverage.NCover3.args" value="//ias .*" />
+          <param name="dotNetCoverage.NCover3.platformBitness" value="x86" />
+          <param name="dotNetCoverage.NCover3.platformVersion" value="v2.0" />
+          <param name="dotNetCoverage.NCover3.reporter.executable.args" value="//or FullCoverageReport:Html:{teamcity.report.path}" />
+          <param name="dotNetCoverage.PartCover.Reg" value="selected" />
+          <param name="dotNetCoverage.PartCover.includes" value="[*]*" />
+          <param name="dotNetCoverage.PartCover.platformBitness" value="x86" />
+          <param name="dotNetCoverage.PartCover.platformVersion" value="v2.0" />
+          <param name="dotNetCoverage.dotCover.home.path" value="%teamcity.tool.JetBrains.dotCover.CommandLineTools.DEFAULT%" />
+          <param name="dotNetTestRunner.Type" value="NUnit" />
+          <param name="nunit_command_line" value="--workers=1" />
+          <param name="nunit_enabled" value="checked" />
+          <param name="nunit_environment" value="auto" />
+          <param name="nunit_include" value="samples\Tests\**\bin\Debug\*Test.dll" />
+          <param name="nunit_path" value="sources\common\deps\NUnit\nunit3-console.exe" />
+          <param name="nunit_platform" value="MSIL" />
+          <param name="nunit_version" value="NUnit-3.0.0" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_22" name="Kill all" type="jetbrains_powershell">
+        <parameters>
+          <param name="jetbrains_powershell_execution" value="PS1" />
+          <param name="jetbrains_powershell_noprofile" value="true" />
+          <param name="jetbrains_powershell_script_code"><![CDATA[taskkill /IM SiliconStudio.Xenko.ConnectionRouter.exe /f
+sleep 2
+taskkill /IM adb.exe /f
+sleep 2
+adb kill-server
+sleep 2]]></param>
+          <param name="jetbrains_powershell_script_mode" value="CODE" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_23" name="Trigger Download queue" type="jetbrains_powershell">
+        <parameters>
+          <param name="jetbrains_powershell_execution" value="PS1" />
+          <param name="jetbrains_powershell_noprofile" value="true" />
+          <param name="jetbrains_powershell_script_code"><![CDATA[$params = @{build_id='%teamcity.build.id%';build_number='%build.number%';repo='PDX_Samples_RunSamplesNVidia';platform='Nvidia';branch='%teamcity.build.branch%'}
+Invoke-WebRequest -Uri http://XXXX/teamcity_upload.php -Method POST -Body $params]]></param>
+          <param name="jetbrains_powershell_script_mode" value="CODE" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings>
+      <vcs-entry-ref root-id="Xenko" />
+    </vcs-settings>
+    <requirements />
+    <build-triggers />
+    <artifact-dependencies>
+      <dependency id="ARTIFACT_DEPENDENCY_4" sourceBuildTypeId="Engine_Package_BuildPackage" cleanDestination="true">
+        <revisionRule name="sameChainOrLastFinished" revision="latest.sameChainOrLastFinished" />
+        <artifact sourcePath="build\Xenko.*.nupkg!** =&gt; .&#xD;&#xA;Windows-Direct3D11-Extra.zip!** =&gt; ." />
+      </dependency>
+      <dependency id="ARTIFACT_DEPENDENCY_5" sourceBuildTypeId="Engine_Samples_SamplesD3d" cleanDestination="false">
+        <revisionRule name="sameChainOrLastFinished" revision="latest.sameChainOrLastFinished" />
+        <artifact sourcePath="samples.zip!** =&gt; samples&#xD;&#xA;samplesGenerated.zip!** =&gt; samplesGenerated" />
+      </dependency>
+    </artifact-dependencies>
+    <dependencies>
+      <depend-on sourceBuildTypeId="Engine_Package_BuildPackage">
+        <options>
+          <option name="take-started-build-with-same-revisions" value="true" />
+          <option name="take-successful-builds-only" value="true" />
+        </options>
+      </depend-on>
+      <depend-on sourceBuildTypeId="Engine_Samples_SamplesD3d">
+        <options>
+          <option name="take-started-build-with-same-revisions" value="true" />
+          <option name="take-successful-builds-only" value="true" />
+        </options>
+      </depend-on>
+    </dependencies>
+    <cleanup />
+  </settings>
+</build-type>
+

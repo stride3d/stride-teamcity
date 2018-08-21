@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="da28f862-6fe1-49a0-98da-a1b41bd06550" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>&lt;Root project&gt;</name>
+  <description>Contains all other projects</description>
+  <parameters />
+  <project-extensions>
+    <extension id="PROJECT_EXT_1" type="ReportTab">
+      <parameters>
+        <param name="startPage" value="coverage.zip!index.html" />
+        <param name="title" value="Code Coverage" />
+        <param name="type" value="BuildReportTab" />
+      </parameters>
+    </extension>
+    <extension id="PROJECT_EXT_3" type="versionedSettings">
+      <parameters>
+        <param name="buildSettings" value="PREFER_CURRENT" />
+        <param name="credentialsStorageType" value="credentialsJSON" />
+        <param name="enabled" value="true" />
+        <param name="rootId" value="XenkoTeamcity" />
+        <param name="showChanges" value="false" />
+      </parameters>
+    </extension>
+    <extension id="PROJECT_EXT_5" type="CloudImage">
+      <parameters>
+        <param name="agent_pool_id" value="0" />
+        <param name="deployTarget" value="SpecificGroup" />
+        <param name="groupId" value="TeamcityAgents" />
+        <param name="imageId" value="/subscriptions/61816513-881b-426e-877a-0f9108b16ecc/resourceGroups/TEAMCITYAGENTS/providers/Microsoft.Compute/images/xenko-build1-image-20180616171008" />
+        <param name="imageType" value="Image" />
+        <param name="imageUrl" value="" />
+        <param name="maxInstances" value="2" />
+        <param name="networkId" value="/subscriptions/61816513-881b-426e-877a-0f9108b16ecc/resourceGroups/TeamcityAgents/providers/Microsoft.Network/virtualNetworks/TeamcityAgents-vnet" />
+        <param name="osType" value="Windows" />
+        <param name="region" value="westus2" />
+        <param name="reuseVm" value="true" />
+        <param name="source-id" value="xenko-build" />
+        <param name="storageAccountType" value="Premium_LRS" />
+        <param name="subnetId" value="default" />
+        <param name="vmPublicIp" value="false" />
+        <param name="vmSize" value="Standard_F4s_v2" />
+        <param name="vmUsername" value="xenko" />
+      </parameters>
+    </extension>
+    <extension id="PROJECT_EXT_6" type="CloudImage">
+      <parameters>
+        <param name="agent_pool_id" value="0" />
+        <param name="deployTarget" value="SpecificGroup" />
+        <param name="groupId" value="TeamcityAgents" />
+        <param name="imageId" value="/subscriptions/61816513-881b-426e-877a-0f9108b16ecc/resourceGroups/TEAMCITYAGENTS/providers/Microsoft.Compute/images/xenko-build-image-20180627172205" />
+        <param name="imageType" value="Image" />
+        <param name="imageUrl" value="" />
+        <param name="maxInstances" value="1" />
+        <param name="networkId" value="/subscriptions/61816513-881b-426e-877a-0f9108b16ecc/resourceGroups/TeamcityAgents/providers/Microsoft.Network/virtualNetworks/TeamcityAgents-vnet" />
+        <param name="osType" value="Windows" />
+        <param name="profileId" value="arm-2" />
+        <param name="region" value="westus2" />
+        <param name="reuseVm" value="true" />
+        <param name="source-id" value="xenko-tc" />
+        <param name="storageAccountType" value="Standard_LRS" />
+        <param name="subnetId" value="default" />
+        <param name="vmPublicIp" value="false" />
+        <param name="vmSize" value="Standard_F4s_v2" />
+        <param name="vmUsername" value="xenko" />
+      </parameters>
+    </extension>
+    <extension id="arm-2" type="CloudProfile">
+      <parameters>
+        <param name="agentPushPreset" value="" />
+        <param name="clientId" value="4d5ec341-3169-4f9c-a85d-a665b54f0502" />
+        <param name="cloud-code" value="arm" />
+        <param name="credentialsType" value="service" />
+        <param name="description" value="" />
+        <param name="enabled" value="true" />
+        <param name="environment" value="AZURE" />
+        <param name="name" value="Xenko Teamcity" />
+        <param name="next-hour" value="" />
+        <param name="profileId" value="arm-2" />
+        <param name="profileServerUrl" value="" />
+        <param name="secure:clientSecret" value="credentialsJSON:9b935358-fe3e-4b94-838a-b530ca0577bb" />
+        <param name="secure:passwords_data" value="credentialsJSON:6532f5c6-876f-4654-a77e-24a084782774" />
+        <param name="subscriptionId" value="61816513-881b-426e-877a-0f9108b16ecc" />
+        <param name="system.cloud.profile_id" value="arm-2" />
+        <param name="tenantId" value="04bbf5b8-ff80-4a4f-a5f1-4d9cdce844c1" />
+        <param name="terminate-idle-time" value="10" />
+        <param name="total-work-time" value="" />
+      </parameters>
+    </extension>
+  </project-extensions>
+  <cleanup>
+    <options>
+      <option name="preventDependenciesArtifactsFromCleanup" value="false" />
+    </options>
+  </cleanup>
+  <subprojectsOrder order="Engine,Documentation,Website" />
+</project>
+

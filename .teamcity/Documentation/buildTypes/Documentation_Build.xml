@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="bec44d39-557f-4b6d-b5cf-9f564883d4de" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Build</name>
+  <description />
+  <settings>
+    <options>
+      <option name="artifactRules" value="xenko-docs/_site/ =&gt; xenko_doc.zip&#xA;xenko-docs/web.config =&gt; xenko_doc.zip" />
+    </options>
+    <parameters />
+    <build-runners>
+      <runner id="RUNNER_9" name="Build Website" type="simpleRunner">
+        <parameters>
+          <param name="command.executable" value="build.bat" />
+          <param name="teamcity.build.workingDir" value="xenko-docs" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings>
+      <vcs-entry-ref root-id="Xenko">
+        <checkout-rule rule="+:. =&gt; xenko" />
+      </vcs-entry-ref>
+      <vcs-entry-ref root-id="Documentation_XenkoDocs">
+        <checkout-rule rule="+:. =&gt; xenko-docs" />
+      </vcs-entry-ref>
+    </vcs-settings>
+    <requirements />
+    <build-triggers>
+      <build-trigger id="vcsTrigger" type="vcsTrigger">
+        <parameters>
+          <param name="branchFilter" value="+:*" />
+          <param name="enableQueueOptimization" value="true" />
+          <param name="quietPeriodMode" value="DO_NOT_USE" />
+          <param name="triggerRules" value="+:xenko-docs/**" />
+        </parameters>
+      </build-trigger>
+    </build-triggers>
+    <cleanup>
+      <policy type="builds" cleanup-level="ARTIFACTS">
+        <parameters>
+          <param name="keepBuilds.count" value="3" />
+        </parameters>
+      </policy>
+    </cleanup>
+  </settings>
+</build-type>
+

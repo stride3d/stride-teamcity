@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="22c9617e-7a08-47fc-b70f-0c204cc8a0e2" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Deploy Xenko</name>
+  <description />
+  <settings>
+    <options>
+      <option name="allowPersonalBuildTriggering" value="false" />
+      <option name="buildConfigurationType" value="DEPLOYMENT" />
+      <option name="maximumNumberOfBuilds" value="1" />
+    </options>
+    <parameters>
+      <param name="reverse.dep.*.env.XenkoOfficialBuild" value="" spec="checkbox label='Official Build' description='If unchecked, beta00123-g&lt;githash&gt; will be appended to nupkg' display='prompt' checkedValue='true'" />
+    </parameters>
+    <build-runners>
+      <runner id="RUNNER_13" name="Update build number with actual package version" type="jetbrains_powershell">
+        <parameters>
+          <param name="jetbrains_powershell_execution" value="PS1" />
+          <param name="jetbrains_powershell_noprofile" value="true" />
+          <param name="jetbrains_powershell_script_code" value="&quot;##teamcity[buildNumber '{0}']&quot; -f (Get-Content .\Xenko.version) | Write-Host" />
+          <param name="jetbrains_powershell_script_mode" value="CODE" />
+          <param name="teamcity.build.workingDir" value="build" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_14" name="" type="MSBuild">
+        <parameters>
+          <param name="build-file-path" value="build/Xenko.build" />
+          <param name="dotNetCoverage.NCover.HTMLReport.File.Sort" value="0" />
+          <param name="dotNetCoverage.NCover.HTMLReport.File.Type" value="1" />
+          <param name="dotNetCoverage.NCover.Reg" value="selected" />
+          <param name="dotNetCoverage.NCover.platformBitness" value="x86" />
+          <param name="dotNetCoverage.NCover.platformVersion" value="v2.0" />
+          <param name="dotNetCoverage.NCover3.Reg" value="selected" />
+          <param name="dotNetCoverage.NCover3.args" value="//ias .*" />
+          <param name="dotNetCoverage.NCover3.platformBitness" value="x86" />
+          <param name="dotNetCoverage.NCover3.platformVersion" value="v2.0" />
+          <param name="dotNetCoverage.NCover3.reporter.executable.args" value="//or FullCoverageReport:Html:{teamcity.report.path}" />
+          <param name="dotNetCoverage.PartCover.Reg" value="selected" />
+          <param name="dotNetCoverage.PartCover.includes" value="[*]*" />
+          <param name="dotNetCoverage.PartCover.platformBitness" value="x86" />
+          <param name="dotNetCoverage.PartCover.platformVersion" value="v2.0" />
+          <param name="dotNetCoverage.dotCover.home.path" value="%teamcity.tool.JetBrains.dotCover.CommandLineTools.DEFAULT%" />
+          <param name="msbuild_version" value="15.0" />
+          <param name="run-platform" value="x86" />
+          <param name="runnerArgs" value="/p:XenkoStoreUrl=%XenkoStoreUrl% /p:XenkoStoreApiKey=%XenkoStoreApiKey%" />
+          <param name="targets" value="Publish" />
+          <param name="teamcity.build.workingDir" value="build" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="toolsVersion" value="15.0" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_15" name="Update success message with store and version it was deployed to" type="jetbrains_powershell">
+        <parameters>
+          <param name="jetbrains_powershell_execution" value="PS1" />
+          <param name="jetbrains_powershell_noprofile" value="true" />
+          <param name="jetbrains_powershell_script_code" value="&quot;##teamcity[buildStatus text='{build.status.text} - deployed %build.number% to %XenkoStoreUrl%']&quot; | Write-Host" />
+          <param name="jetbrains_powershell_script_mode" value="CODE" />
+          <param name="teamcity.build.workingDir" value="build" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings>
+      <vcs-entry-ref root-id="Xenko" />
+    </vcs-settings>
+    <requirements />
+    <build-triggers />
+    <build-extensions>
+      <extension id="BUILD_EXT_7" type="VcsLabeling">
+        <parameters>
+          <param name="branchFilter" value="+:*" />
+          <param name="labelingPattern" value="releases/%build.number%" />
+          <param name="successfulOnly" value="true" />
+          <param name="vcsRootId" value="Xenko" />
+        </parameters>
+      </extension>
+    </build-extensions>
+    <artifact-dependencies>
+      <dependency id="ARTIFACT_DEPENDENCY_1" sourceBuildTypeId="Engine_Package_BuildPackage" cleanDestination="true">
+        <revisionRule name="sameChainOrLastFinished" revision="latest.sameChainOrLastFinished" />
+        <artifact sourcePath="**/*.* =&gt; ." />
+      </dependency>
+    </artifact-dependencies>
+    <dependencies>
+      <depend-on sourceBuildTypeId="Engine_Package_BuildPackage">
+        <options>
+          <option name="take-started-build-with-same-revisions" value="true" />
+          <option name="take-successful-builds-only" value="true" />
+        </options>
+      </depend-on>
+    </dependencies>
+    <cleanup />
+  </settings>
+</build-type>
+

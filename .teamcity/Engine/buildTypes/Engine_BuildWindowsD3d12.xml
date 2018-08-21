@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="dcbdd6ef-d5c6-4810-9b90-572bdd3321d2" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Build Windows D3D12</name>
+  <description />
+  <settings ref="Engine_BuildRuntimeFromSourceTemplate">
+    <parameters>
+      <param name="RuntimeBuildTarget" value="WindowsDirect3D12" />
+    </parameters>
+    <build-runners order="RUNNER_7" />
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

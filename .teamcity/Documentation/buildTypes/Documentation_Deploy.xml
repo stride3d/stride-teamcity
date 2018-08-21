@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="3c15ea7d-af51-4f59-8b29-a288a4be6e41" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Deploy</name>
+  <description />
+  <settings>
+    <options>
+      <option name="allowPersonalBuildTriggering" value="false" />
+      <option name="buildConfigurationType" value="DEPLOYMENT" />
+      <option name="maximumNumberOfBuilds" value="1" />
+    </options>
+    <parameters>
+      <param name="deployment_folder" value="3.0" spec="text display='normal' validationMode='any'" />
+      <param name="deployment_password" value="credentialsJSON:67959a47-9615-403f-958c-247d9c8adfb8" spec="password display='prompt'" />
+      <param name="deployment_profile" value="build/xenko-doc.azurewebsites.net.PublishSettings" spec="text display='prompt' validationMode='any'" />
+    </parameters>
+    <build-runners>
+      <runner id="RUNNER_45" name="Deploy documentation to Azure" type="jetbrains_powershell">
+        <parameters>
+          <param name="jetbrains_powershell_execution" value="PS1" />
+          <param name="jetbrains_powershell_noprofile" value="true" />
+          <param name="jetbrains_powershell_script_code"><![CDATA[# Set the deployment folder 
+$folder = "%deployment_folder%"
+if(!$folder)
+{
+  $branch = "%teamcity.build.branch%"
+  if ($branch -notmatch "^master-\d\.\d+")
+  {
+      Write-Host "You should specify the deployment folder or select a master branch."
+      Write-Host "Cannot determine deployment folder for branch [$branch]."
+      Write-Host "Branch name should be master-x.x for automatic deployment folder detection."
+      exit 1;
+  }
+  $folder = $branch -replace "^master-(\d)\.(\d+)",'$1.$2'
+}
+
+
+# Deploy doc on the target
+Write-Host Executing `'build/WAWSDeploy.exe xenko_doc.zip "%deployment_profile%" /v /t $folder /d /p %deployment_password%`'
+build/WAWSDeploy.exe xenko_doc.zip "%deployment_profile%" /v /t $folder /d /p %deployment_password%]]></param>
+          <param name="jetbrains_powershell_script_mode" value="CODE" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_44" name="" type="PurgeCloudflareCache">
+        <parameters>
+          <param name="CloudflareApiKey" value="zxx175d32bfa837dc7e" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings>
+      <vcs-entry-ref root-id="Documentation_XenkoDocs" />
+    </vcs-settings>
+    <requirements />
+    <build-triggers />
+    <artifact-dependencies>
+      <dependency id="ARTIFACT_DEPENDENCY_10" sourceBuildTypeId="Documentation_Build" cleanDestination="false">
+        <revisionRule name="sameChainOrLastFinished" revision="latest.sameChainOrLastFinished" />
+        <artifact sourcePath="*.zip =&gt; ." />
+      </dependency>
+    </artifact-dependencies>
+    <dependencies>
+      <depend-on sourceBuildTypeId="Documentation_Build">
+        <options>
+          <option name="take-started-build-with-same-revisions" value="true" />
+          <option name="take-successful-builds-only" value="true" />
+        </options>
+      </depend-on>
+    </dependencies>
+    <cleanup />
+  </settings>
+</build-type>
+
