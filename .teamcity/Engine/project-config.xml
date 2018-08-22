@@ -15,6 +15,13 @@
         <param name="username" value="" />
       </parameters>
     </extension>
+    <extension id="PROJECT_EXT_7" type="ReportTab">
+      <parameters>
+        <param name="startPage" value=".teamcity/BuildWarningReport.zip!BuildWarningReport.html" />
+        <param name="title" value="Build Warnings" />
+        <param name="type" value="BuildReportTab" />
+      </parameters>
+    </extension>
   </project-extensions>
   <cleanup />
 </project>
