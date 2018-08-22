@@ -39,7 +39,7 @@
       </runner>
       <runner id="RUNNER_47" name="" type="Engine_BuildWarningReportGenerator">
         <parameters>
-          <param name="BuildCheckoutDirectoryPath" value="" />
+          <param name="BuildCheckoutDirectoryPath" value="." />
           <param name="BuildLogPath" value="%BuildLogFile%" />
           <param name="teamcity.step.mode" value="default" />
         </parameters>
