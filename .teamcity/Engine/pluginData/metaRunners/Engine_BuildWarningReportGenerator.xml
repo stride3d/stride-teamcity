@@ -78,7 +78,7 @@ Foreach ($line in Get-Content -ErrorAction Stop $BuildLogPath)
         if ($content -match '^Project .* is building ".*\\(?<solution>.*\.sln)" .*$')
         {
             $sln = $matches['solution']
-            $warnings((New-Object BuildWarning($sln, "", "", "")))
+            $warnings.Add((New-Object BuildWarning($sln, "", "", "")))
         }
         elseif ($content -match '^Project .* is building ".*\\(?<project>.*?)" .*$')
         {
