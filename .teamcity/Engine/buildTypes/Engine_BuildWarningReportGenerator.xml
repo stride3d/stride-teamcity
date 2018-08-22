@@ -9,17 +9,9 @@
         <parameters>
           <param name="jetbrains_powershell_execution" value="PS1" />
           <param name="jetbrains_powershell_noprofile" value="true" />
-          <param name="jetbrains_powershell_script_code"><![CDATA[Param
-(
-    [parameter(Mandatory=$true)][string]
-    $BuildLogPath,
-
-    [parameter(Mandatory=$true)][string]
-    $BuildCheckoutDirectoryPath,
-
-    [parameter()][string]
-    $BuildArtifactRepositoryUrl
-)
+          <param name="jetbrains_powershell_script_code"><![CDATA[$BuildLogPath = %BuildLogPath%
+$BuildCheckoutDirectoryPath = %BuildCheckoutDirectoryPath%
+$BuildArtifactRepositoryUrl = "%teamcity.serverUrl%/repository/download/%system.teamcity.buildType.id%/"
 
 <#
 BuildWarningReportGenerator.ps1
