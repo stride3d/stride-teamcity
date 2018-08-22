@@ -37,6 +37,13 @@
           <param name="toolsVersion" value="15.0" />
         </parameters>
       </runner>
+      <runner id="RUNNER_47" name="" type="Engine_BuildWarningReportGenerator">
+        <parameters>
+          <param name="BuildCheckoutDirectoryPath" value="" />
+          <param name="BuildLogPath" value="%BuildLogFile%" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
     </build-runners>
     <vcs-settings>
       <vcs-entry-ref root-id="Xenko" />
