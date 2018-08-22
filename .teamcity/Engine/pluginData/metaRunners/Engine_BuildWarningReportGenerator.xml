@@ -78,7 +78,7 @@ Foreach ($line in Get-Content -ErrorAction Stop $BuildLogPath)
         if ($content -match '^Project .* is building ".*\\(?<solution>.*\.sln)" .*$')
         {
             $sln = $matches['solution']
-            $warnings += New-Object BuildWarning($sln, "", "", "")
+            $warnings((New-Object BuildWarning($sln, "", "", "")))
         }
         elseif ($content -match '^Project .* is building ".*\\(?<project>.*?)" .*$')
         {
@@ -87,7 +87,7 @@ Foreach ($line in Get-Content -ErrorAction Stop $BuildLogPath)
             {
                 $projectStack[$i] = $projectStack[$i-1]
             }
-            #$warnings += New-Object BuildWarning("", $projectStack[$i], "") # for troubleshooting
+            #$warnings.Add((New-Object BuildWarning("", $projectStack[$i], ""))) # for troubleshooting
             $projWarningKeys.Clear()
         }
         elseif ($content -match '^(?<warningMessage>.*warning (?<warningCode>\w*): .*)$')
@@ -96,7 +96,7 @@ Foreach ($line in Get-Content -ErrorAction Stop $BuildLogPath)
             # avoid duplicates
             if ( -not $projWarningKeys.Contains($newWarning.Key))
             {
-                $warnings += $newWarning
+                $warnings.Add($newWarning)
                 $projWarningKeys.Add($newWarning.Key)
             }
         }
