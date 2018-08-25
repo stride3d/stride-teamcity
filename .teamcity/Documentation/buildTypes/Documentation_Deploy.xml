@@ -43,7 +43,7 @@ build/WAWSDeploy.exe xenko_doc.zip "%deployment_profile%" /v /t $folder /d /p %d
       </runner>
       <runner id="RUNNER_44" name="" type="PurgeCloudflareCache">
         <parameters>
-          <param name="CloudflareApiKey" value="zxx175d32bfa837dc7e" />
+          <param name="CloudflareApiKey" value="zxx06124ba943b8026eace74fc24dea0c32de62ad1f265464c7990a3aab55fa744973b0722275d5f162" />
           <param name="teamcity.step.mode" value="default" />
         </parameters>
       </runner>
