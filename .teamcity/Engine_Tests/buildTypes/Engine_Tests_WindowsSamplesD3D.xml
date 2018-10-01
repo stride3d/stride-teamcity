@@ -7,7 +7,7 @@
       <setting-ref ref="vcsTrigger" />
     </disabled-settings>
     <parameters>
-      <param name="TestCategories" value="Game" />
+      <param name="TestCategories" value="Samples" />
     </parameters>
     <build-runners order="RUNNER_43, RUNNER_8" />
     <vcs-settings />
