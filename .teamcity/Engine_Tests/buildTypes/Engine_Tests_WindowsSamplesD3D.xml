@@ -3,6 +3,9 @@
   <name>Windows - Samples D3D</name>
   <description />
   <settings ref="Engine_Tests_WindowsTestsTemplate">
+    <options>
+      <option name="artifactRules" value="build\TestResults =&gt; TestResults&#xA;samplesGenerated\screenshots\*.png =&gt; screenshots-windows-%build.number%.zip" />
+    </options>
     <disabled-settings>
       <setting-ref ref="vcsTrigger" />
     </disabled-settings>
