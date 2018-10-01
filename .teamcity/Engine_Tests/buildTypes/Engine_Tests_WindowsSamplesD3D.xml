@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="04ac8b68-475f-4002-9698-88de9946ccec" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Windows - Samples D3D</name>
+  <description />
+  <settings ref="Engine_Tests_WindowsTestsTemplate">
+    <disabled-settings>
+      <setting-ref ref="vcsTrigger" />
+    </disabled-settings>
+    <parameters>
+      <param name="TestCategories" value="Game" />
+    </parameters>
+    <build-runners order="RUNNER_43, RUNNER_8" />
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+
