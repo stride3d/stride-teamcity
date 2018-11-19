@@ -13,7 +13,7 @@
     <build-runners>
       <runner id="RUNNER_12" name="" type="MSBuild">
         <parameters>
-          <param name="build-file-path" value="sources/launcher/build/Xenko.build" />
+          <param name="build-file-path" value="build/Xenko.build" />
           <param name="dotNetCoverage.NCover.HTMLReport.File.Sort" value="0" />
           <param name="dotNetCoverage.NCover.HTMLReport.File.Type" value="1" />
           <param name="dotNetCoverage.NCover.Reg" value="selected" />
@@ -32,8 +32,7 @@
           <param name="msbuild_version" value="15.0" />
           <param name="run-platform" value="x86" />
           <param name="runnerArgs" value="/nr:false /p:CustomInstaller=&quot;%CustomInstaller%&quot; /p:CustomInstallerStoreUrl=&quot;%CustomInstallerStoreUrl%&quot;" />
-          <param name="targets" value="Build;PackageInstaller" />
-          <param name="teamcity.build.workingDir" value="sources/launcher" />
+          <param name="targets" value="FullBuildLauncher" />
           <param name="teamcity.step.mode" value="default" />
           <param name="toolsVersion" value="15.0" />
         </parameters>
