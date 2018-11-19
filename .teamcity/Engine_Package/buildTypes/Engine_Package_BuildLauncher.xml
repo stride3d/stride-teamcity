@@ -50,9 +50,6 @@
     </build-runners>
     <vcs-settings>
       <vcs-entry-ref root-id="Xenko" />
-      <vcs-entry-ref root-id="Engine_Package_XenkoLauncher">
-        <checkout-rule rule="+:. =&gt; sources/launcher" />
-      </vcs-entry-ref>
     </vcs-settings>
     <requirements />
     <build-triggers>
