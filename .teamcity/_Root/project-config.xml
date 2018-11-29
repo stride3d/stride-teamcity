@@ -46,7 +46,7 @@
         <param name="agent_pool_id" value="0" />
         <param name="deployTarget" value="SpecificGroup" />
         <param name="groupId" value="TeamcityAgents" />
-        <param name="imageId" value="/subscriptions/61816513-881b-426e-877a-0f9108b16ecc/resourceGroups/TEAMCITYAGENTS/providers/Microsoft.Compute/images/xenko-build-image-20180627172205" />
+        <param name="imageId" value="/subscriptions/61816513-881b-426e-877a-0f9108b16ecc/resourceGroups/TEAMCITYAGENTS/providers/Microsoft.Compute/images/xenko-build-image-20181129164518" />
         <param name="imageType" value="Image" />
         <param name="imageUrl" value="" />
         <param name="maxInstances" value="1" />
