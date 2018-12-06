@@ -4,7 +4,7 @@
   <description />
   <settings>
     <options>
-      <option name="artifactRules" value="build/.nuget/NuGet.exe =&gt; build/.nuget&#xA;build/Xenko.Launcher*.nupkg =&gt; build&#xA;build/Xenko.build =&gt; build&#xA;build/XenkoSetup*.exe =&gt; build" />
+      <option name="artifactRules" value="build/.nuget/NuGet.exe =&gt; build/.nuget&#xA;bin/launcher/*.nupkg =&gt; bin/launcher&#xA;bin/launcher/XenkoSetup*.exe =&gt; bin/launcher&#xA;build/Xenko.build =&gt; build" />
     </options>
     <parameters>
       <param name="CustomInstaller" value="" spec="text validationMode='any'" />
