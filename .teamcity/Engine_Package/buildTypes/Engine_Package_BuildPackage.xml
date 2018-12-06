@@ -8,6 +8,7 @@
       <option name="artifactRules" value="bin/packages/*.nupkg =&gt; bin/packages&#xA;build/Xenko.build =&gt; build&#xA;build/Xenko.version =&gt; build&#xA;build/.nuget/NuGet.exe =&gt; build/.nuget" />
     </options>
     <disabled-settings>
+      <setting-ref ref="RUNNER_11" />
       <setting-ref ref="vcsTrigger" />
     </disabled-settings>
     <parameters>
