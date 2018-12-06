@@ -35,7 +35,7 @@
           <param name="msbuild_version" value="15.0" />
           <param name="run-platform" value="x86" />
           <param name="runnerArgs" value="/nr:false" />
-          <param name="targets" value="BuildForPackage;GeneratePackage" />
+          <param name="targets" value="Package" />
           <param name="teamcity.step.mode" value="default" />
           <param name="toolsVersion" value="15.0" />
         </parameters>
