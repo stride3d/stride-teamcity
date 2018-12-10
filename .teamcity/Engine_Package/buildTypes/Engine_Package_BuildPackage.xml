@@ -12,6 +12,7 @@
       <setting-ref ref="vcsTrigger" />
     </disabled-settings>
     <parameters>
+      <param name="XenkoGraphicsApiDependentBuildAll" value="false" spec="checkbox uncheckedValue='false' display='normal' checkedValue='true'" />
       <param name="XenkoPlatforms" value="Windows" spec="select data_5='Linux' display='normal' multiple='true' valueSeparator=';' label='Platforms' data_2='UWP' data_1='Windows' data_4='Android' data_3='iOS'" />
       <param name="env.XenkoOfficialBuild" value="" spec="checkbox checkedValue='true'" />
     </parameters>
