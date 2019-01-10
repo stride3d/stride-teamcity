@@ -3,7 +3,7 @@
   <name>Deploy</name>
   <parameters>
     <param name="XenkoStoreApiKey" value="credentialsJSON:ca50f1d8-904d-4bf0-88f5-cb095f92aacd" spec="password label='NuGet Server API Key' display='prompt'" />
-    <param name="XenkoStoreUrl" value="https://xenko-packages.azurewebsites.net/api/v2/package" spec="text label='NuGet Server Push URL' display='prompt' validationMode='regex' regexp='https://.*/api/v2/package' validationMessage='Should be in the form https://&lt;something.domain.com&gt;/api/v2/package'" />
+    <param name="XenkoStoreUrl" value="" spec="text label='NuGet Server Push URL' validationMode='any' display='prompt'" />
   </parameters>
   <cleanup />
 </project>
