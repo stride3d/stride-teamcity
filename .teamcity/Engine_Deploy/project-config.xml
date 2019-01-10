@@ -3,7 +3,7 @@
   <name>Deploy</name>
   <parameters>
     <param name="XenkoStoreApiKey" value="credentialsJSON:ca50f1d8-904d-4bf0-88f5-cb095f92aacd" spec="password label='NuGet Server API Key' display='prompt'" />
-    <param name="XenkoStoreUrl" value="" spec="text label='NuGet Server Push URL' validationMode='any' display='prompt'" />
+    <param name="XenkoStoreUrl" value="https://api.nuget.org/v3/index.json" spec="text label='NuGet Server Push URL' validationMode='any' display='prompt'" />
   </parameters>
   <cleanup />
 </project>
