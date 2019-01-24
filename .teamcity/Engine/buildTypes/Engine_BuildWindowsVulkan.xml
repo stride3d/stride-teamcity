@@ -6,7 +6,7 @@
     <parameters>
       <param name="RuntimeBuildTarget" value="WindowsVulkan" />
     </parameters>
-    <build-runners order="RUNNER_7" />
+    <build-runners order="RUNNER_7, RUNNER_47" />
     <vcs-settings />
     <requirements />
     <build-triggers />
