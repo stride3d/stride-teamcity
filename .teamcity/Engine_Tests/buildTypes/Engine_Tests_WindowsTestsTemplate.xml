@@ -4,7 +4,7 @@
   <settings>
     <options>
       <option name="allowExternalStatus" value="true" />
-      <option name="artifactRules" value="build\TestResults =&gt; TestResults" />
+      <option name="artifactRules" value="build\TestResults =&gt; TestResults&#xA;tests\local =&gt; local" />
       <option name="executionTimeoutMin" value="30" />
     </options>
     <parameters>
