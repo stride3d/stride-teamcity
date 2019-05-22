@@ -44,13 +44,13 @@
           <param name="dotNetCoverage.PartCover.platformBitness" value="x86" />
           <param name="dotNetCoverage.PartCover.platformVersion" value="v2.0" />
           <param name="dotNetCoverage.dotCover.home.path" value="%teamcity.tool.JetBrains.dotCover.CommandLineTools.DEFAULT%" />
-          <param name="msbuild_version" value="15.0" />
+          <param name="msbuild_version" value="16.0" />
           <param name="run-platform" value="x86" />
           <param name="runnerArgs" value="/p:XenkoStoreUrl=%XenkoStoreUrl% /p:XenkoStoreApiKey=%XenkoStoreApiKey% /p:XenkoPublishSkipSamplesTemplates=%XenkoPublishSkipSamplesTemplates%" />
           <param name="targets" value="Publish" />
           <param name="teamcity.build.workingDir" value="build" />
           <param name="teamcity.step.mode" value="default" />
-          <param name="toolsVersion" value="15.0" />
+          <param name="toolsVersion" value="Current" />
         </parameters>
       </runner>
       <runner id="RUNNER_15" name="Update success message with store and version it was deployed to" type="jetbrains_powershell">
