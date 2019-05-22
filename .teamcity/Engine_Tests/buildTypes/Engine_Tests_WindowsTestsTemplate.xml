@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="9e97ba16-9a99-4314-b560-b591fb325536" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="9e97ba16-9a99-4314-b560-b591fb325536" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
   <name>Windows Tests Template</name>
   <settings>
     <options>
@@ -42,13 +42,13 @@ sleep 2]]></param>
           <param name="dotNetCoverage.PartCover.platformBitness" value="x86" />
           <param name="dotNetCoverage.PartCover.platformVersion" value="v2.0" />
           <param name="dotNetCoverage.dotCover.home.path" value="%teamcity.tool.JetBrains.dotCover.CommandLineTools.DEFAULT%" />
-          <param name="msbuild_version" value="15.0" />
+          <param name="msbuild_version" value="16.0" />
           <param name="run-platform" value="x86" />
           <param name="runnerArgs" value="/nr:false /p:XenkoTestCategories=%TestCategories%;VisualStudioVersion=15.0" />
           <param name="targets" value="RunTestsWindows" />
           <param name="teamcity.step.mode" value="default" />
           <param name="teamcity.tests.runRiskGroupTestsFirst" value="recentlyFailed" />
-          <param name="toolsVersion" value="15.0" />
+          <param name="toolsVersion" value="Current" />
         </parameters>
       </runner>
     </build-runners>
