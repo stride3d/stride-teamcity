@@ -29,12 +29,12 @@
           <param name="dotNetCoverage.PartCover.platformBitness" value="x86" />
           <param name="dotNetCoverage.PartCover.platformVersion" value="v2.0" />
           <param name="dotNetCoverage.dotCover.home.path" value="%teamcity.tool.JetBrains.dotCover.CommandLineTools.DEFAULT%" />
-          <param name="msbuild_version" value="15.0" />
+          <param name="msbuild_version" value="16.0" />
           <param name="run-platform" value="x86" />
           <param name="runnerArgs" value="/nr:false /p:CustomInstaller=&quot;%CustomInstaller%&quot; /p:CustomInstallerStoreUrl=&quot;%CustomInstallerStoreUrl%&quot;" />
           <param name="targets" value="FullBuildLauncher" />
           <param name="teamcity.step.mode" value="default" />
-          <param name="toolsVersion" value="15.0" />
+          <param name="toolsVersion" value="Current" />
         </parameters>
       </runner>
       <runner id="RUNNER_17" name="Update build number with actual package version" type="jetbrains_powershell">
