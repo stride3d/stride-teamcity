@@ -32,7 +32,7 @@
           <param name="dotNetCoverage.dotCover.home.path" value="%teamcity.tool.JetBrains.dotCover.CommandLineTools.DEFAULT%" />
           <param name="msbuild_version" value="16.0" />
           <param name="run-platform" value="x86" />
-          <param name="runnerArgs" value="/m /nr:false /p:XenkoSkipUnitTests=true /p:XenkoEnableCodeAnalysis=true /p:VisualStudioVersion=15.0 %MSBuildLogClause%" />
+          <param name="runnerArgs" value="/m /nr:false /p:XenkoSkipUnitTests=true /p:XenkoEnableCodeAnalysis=true /p:VisualStudioVersion=16.0 %MSBuildLogClause%" />
           <param name="targets" value="Build%RuntimeBuildTarget%" />
           <param name="teamcity.step.mode" value="default" />
           <param name="toolsVersion" value="Current" />
