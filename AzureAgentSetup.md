@@ -5,10 +5,6 @@
 * Same as Xenko README.md: Visual Studio, FBX SDK
 * Visual C++ 2013 runtime (x64 & x86)
 
-## Add Xamarin.Android paths to default user registry hive
-
-TODO
-
 ## Install teamcity agent
 
 * Don't install as service
