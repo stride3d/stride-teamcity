@@ -66,6 +66,7 @@
     <extension id="arm-2" type="CloudProfile">
       <parameters>
         <param name="agentPushPreset" value="" />
+        <param name="agent_pool_id" value="0" />
         <param name="clientId" value="4d5ec341-3169-4f9c-a85d-a665b54f0502" />
         <param name="cloud-code" value="arm" />
         <param name="credentialsType" value="service" />
@@ -81,7 +82,7 @@
         <param name="subscriptionId" value="61816513-881b-426e-877a-0f9108b16ecc" />
         <param name="system.cloud.profile_id" value="arm-2" />
         <param name="tenantId" value="04bbf5b8-ff80-4a4f-a5f1-4d9cdce844c1" />
-        <param name="terminate-idle-time" value="10" />
+        <param name="terminate-idle-time" value="" />
         <param name="total-work-time" value="" />
       </parameters>
     </extension>
