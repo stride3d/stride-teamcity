@@ -48,7 +48,7 @@ Windows Registry Editor Version 5.00
 ### Codesign
 
 * Copy <codesign>.pfx to C:\Windows\OEM (replace <codesign> with actual filename)
-* Add register_certs.bat to startup folder of default user (replace <codesign> with actual filename)
+* Add register_certs.bat to startup folder of default user `C:\Users\default\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup` (replace <codesign> with actual filename)
 ```
 certutil -f -user -importpfx C:\Windows\OEM\<codesign>.pfx NoRoot
 ```
