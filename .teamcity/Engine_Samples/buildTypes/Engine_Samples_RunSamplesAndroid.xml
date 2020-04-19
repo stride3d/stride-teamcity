@@ -40,13 +40,13 @@ foreach($file in $apk_files) { adb install -r $file.Fullname }]]></param>
           <param name="jetbrains_powershell_execution" value="PS1" />
           <param name="jetbrains_powershell_noprofile" value="true" />
           <param name="jetbrains_powershell_script_code"><![CDATA[mkdir build
-echo "null" > build\Xenko.sln
+echo "null" > build\Stride.sln
 mkdir screenshots
 adb kill-server
 sleep 2
-taskkill /IM SiliconStudio.Xenko.ConnectionRouter.exe /f
+taskkill /IM SiliconStudio.Stride.ConnectionRouter.exe /f
 sleep 2
-start Bin\Windows\SiliconStudio.Xenko.ConnectionRouter.exe
+start Bin\Windows\SiliconStudio.Stride.ConnectionRouter.exe
 sleep 2
 adb logcat -c
 sleep 2]]></param>
@@ -96,7 +96,7 @@ if($state -match "Display Power: state=ON") { adb shell input keyevent 26 }]]></
         <parameters>
           <param name="jetbrains_powershell_execution" value="PS1" />
           <param name="jetbrains_powershell_noprofile" value="true" />
-          <param name="jetbrains_powershell_script_code"><![CDATA[taskkill /IM SiliconStudio.Xenko.ConnectionRouter.exe /f
+          <param name="jetbrains_powershell_script_code"><![CDATA[taskkill /IM SiliconStudio.Stride.ConnectionRouter.exe /f
 sleep 2
 taskkill /IM adb.exe /f
 sleep 2
@@ -118,14 +118,14 @@ Invoke-WebRequest -Uri http://XXX/teamcity_upload.php -Method POST -Body $params
       </runner>
     </build-runners>
     <vcs-settings>
-      <vcs-entry-ref root-id="Xenko" />
+      <vcs-entry-ref root-id="Stride" />
     </vcs-settings>
     <requirements />
     <build-triggers />
     <artifact-dependencies>
       <dependency id="ARTIFACT_DEPENDENCY_7" sourceBuildTypeId="Engine_Package_BuildPackage" cleanDestination="true">
         <revisionRule name="sameChainOrLastFinished" revision="latest.sameChainOrLastFinished" />
-        <artifact sourcePath="build\Xenko.*.nupkg!** =&gt; .&#xD;&#xA;Windows-Direct3D11-Extra.zip!** =&gt; ." />
+        <artifact sourcePath="build\Stride.*.nupkg!** =&gt; .&#xD;&#xA;Windows-Direct3D11-Extra.zip!** =&gt; ." />
       </dependency>
       <dependency id="ARTIFACT_DEPENDENCY_8" sourceBuildTypeId="Engine_Samples_SamplesAndroid" cleanDestination="false">
         <revisionRule name="sameChainOrLastFinished" revision="latest.sameChainOrLastFinished" />

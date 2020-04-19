@@ -3,12 +3,12 @@
   <name>Android Tests Template</name>
   <settings>
     <parameters>
-      <param name="env.XENKO_BUILD_NUMBER" value="%build.number%" />
+      <param name="env.STRIDE_BUILD_NUMBER" value="%build.number%" />
     </parameters>
     <build-runners>
       <runner id="RUNNER_38" name="Build Windows" type="MSBuild">
         <parameters>
-          <param name="build-file-path" value="build\Xenko.build" />
+          <param name="build-file-path" value="build\Stride.build" />
           <param name="dotNetCoverage.NCover.HTMLReport.File.Sort" value="0" />
           <param name="dotNetCoverage.NCover.HTMLReport.File.Type" value="1" />
           <param name="dotNetCoverage.NCover.Reg" value="selected" />
@@ -26,7 +26,7 @@
           <param name="dotNetCoverage.dotCover.home.path" value="%teamcity.tool.JetBrains.dotCover.CommandLineTools.DEFAULT%" />
           <param name="msbuild_version" value="15.0" />
           <param name="run-platform" value="x86" />
-          <param name="runnerArgs" value="/m /nr:false /p:XenkoSkipUnitTests=true" />
+          <param name="runnerArgs" value="/m /nr:false /p:StrideSkipUnitTests=true" />
           <param name="targets" value="BuildWindows" />
           <param name="teamcity.step.mode" value="default" />
           <param name="toolsVersion" value="15.0" />
@@ -34,7 +34,7 @@
       </runner>
       <runner id="RUNNER_39" name="" type="MSBuild">
         <parameters>
-          <param name="build-file-path" value="build\Xenko.build" />
+          <param name="build-file-path" value="build\Stride.build" />
           <param name="dotNetCoverage.NCover.HTMLReport.File.Sort" value="0" />
           <param name="dotNetCoverage.NCover.HTMLReport.File.Type" value="1" />
           <param name="dotNetCoverage.NCover.Reg" value="selected" />
@@ -52,7 +52,7 @@
           <param name="dotNetCoverage.dotCover.home.path" value="%teamcity.tool.JetBrains.dotCover.CommandLineTools.DEFAULT%" />
           <param name="msbuild_version" value="15.0" />
           <param name="run-platform" value="x86" />
-          <param name="runnerArgs" value="/m /nr:false /p:XenkoSkipUnitTests=true" />
+          <param name="runnerArgs" value="/m /nr:false /p:StrideSkipUnitTests=true" />
           <param name="targets" value="BuildAndroid" />
           <param name="teamcity.step.mode" value="default" />
           <param name="toolsVersion" value="15.0" />
@@ -70,11 +70,11 @@ sleep 2
 $state = adb shell "dumpsys power | grep state=OFF"
 if($state -match "Display Power: state=OFF") { adb shell input keyevent 82 }
 sleep 2
-taskkill /IM SiliconStudio.Xenko.ConnectionRouter.exe /f
+taskkill /IM SiliconStudio.Stride.ConnectionRouter.exe /f
 sleep 2
 Copy-Item .\Bin\Windows\Direct3D11\* .\Bin\Windows\
 Copy-Item .\Bin\Android\OpenGLES\* .\Bin\Android\
-start .\Bin\Windows\SiliconStudio.Xenko.ConnectionRouter.exe
+start .\Bin\Windows\SiliconStudio.Stride.ConnectionRouter.exe
 sleep 2]]></param>
           <param name="jetbrains_powershell_script_mode" value="CODE" />
           <param name="teamcity.step.mode" value="default" />
@@ -82,7 +82,7 @@ sleep 2]]></param>
       </runner>
       <runner id="RUNNER_41" name="" type="MSBuild">
         <parameters>
-          <param name="build-file-path" value="build\Xenko.build" />
+          <param name="build-file-path" value="build\Stride.build" />
           <param name="dotNetCoverage.NCover.HTMLReport.File.Sort" value="0" />
           <param name="dotNetCoverage.NCover.HTMLReport.File.Type" value="1" />
           <param name="dotNetCoverage.NCover.Reg" value="selected" />
@@ -114,7 +114,7 @@ sleep 2]]></param>
 if($state -match "Display Power: state=ON") { adb shell input keyevent 26 }
 sleep 2
 taskkill /F /FI "Imagename eq SiliconStudio.*"
-taskkill /F /FI "Imagename eq Xenko.*"
+taskkill /F /FI "Imagename eq Stride.*"
 taskkill /F /IM adb.exe
 sleep 2
 adb kill-server
@@ -125,7 +125,7 @@ sleep 2]]></param>
       </runner>
     </build-runners>
     <vcs-settings>
-      <vcs-entry-ref root-id="Xenko" />
+      <vcs-entry-ref root-id="Stride" />
     </vcs-settings>
     <requirements />
     <build-triggers />

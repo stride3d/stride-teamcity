@@ -16,7 +16,7 @@
         <param name="buildSettings" value="PREFER_CURRENT" />
         <param name="credentialsStorageType" value="credentialsJSON" />
         <param name="enabled" value="true" />
-        <param name="rootId" value="XenkoTeamcity" />
+        <param name="rootId" value="StrideTeamcity" />
         <param name="showChanges" value="false" />
       </parameters>
     </extension>
@@ -25,7 +25,7 @@
         <param name="agent_pool_id" value="0" />
         <param name="deployTarget" value="SpecificGroup" />
         <param name="groupId" value="TeamcityAgents" />
-        <param name="imageId" value="/subscriptions/61816513-881b-426e-877a-0f9108b16ecc/resourceGroups/TEAMCITYAGENTS/providers/Microsoft.Compute/images/xenko-build1-image-20180616171008" />
+        <param name="imageId" value="/subscriptions/61816513-881b-426e-877a-0f9108b16ecc/resourceGroups/TEAMCITYAGENTS/providers/Microsoft.Compute/images/stride-build1-image-20180616171008" />
         <param name="imageType" value="Image" />
         <param name="imageUrl" value="" />
         <param name="maxInstances" value="2" />
@@ -33,12 +33,12 @@
         <param name="osType" value="Windows" />
         <param name="region" value="westus2" />
         <param name="reuseVm" value="true" />
-        <param name="source-id" value="xenko-build" />
+        <param name="source-id" value="stride-build" />
         <param name="storageAccountType" value="Premium_LRS" />
         <param name="subnetId" value="default" />
         <param name="vmPublicIp" value="false" />
         <param name="vmSize" value="Standard_F4s_v2" />
-        <param name="vmUsername" value="xenko" />
+        <param name="vmUsername" value="stride" />
       </parameters>
     </extension>
     <extension id="PROJECT_EXT_6" type="CloudImage">
@@ -46,7 +46,7 @@
         <param name="agent_pool_id" value="0" />
         <param name="deployTarget" value="SpecificGroup" />
         <param name="groupId" value="TeamcityAgents" />
-        <param name="imageId" value="/subscriptions/61816513-881b-426e-877a-0f9108b16ecc/resourceGroups/TEAMCITYAGENTS/providers/Microsoft.Compute/images/xenko-build-image-20191004211722" />
+        <param name="imageId" value="/subscriptions/61816513-881b-426e-877a-0f9108b16ecc/resourceGroups/TEAMCITYAGENTS/providers/Microsoft.Compute/images/stride-build-image-20191004211722" />
         <param name="imageType" value="Image" />
         <param name="imageUrl" value="" />
         <param name="maxInstances" value="1" />
@@ -55,12 +55,12 @@
         <param name="profileId" value="arm-2" />
         <param name="region" value="westus2" />
         <param name="reuseVm" value="true" />
-        <param name="source-id" value="xenko-tc" />
+        <param name="source-id" value="stride-tc" />
         <param name="storageAccountType" value="Standard_LRS" />
         <param name="subnetId" value="default" />
         <param name="vmPublicIp" value="false" />
         <param name="vmSize" value="Standard_F4s_v2" />
-        <param name="vmUsername" value="xenko" />
+        <param name="vmUsername" value="stride" />
       </parameters>
     </extension>
     <extension id="arm-2" type="CloudProfile">
@@ -72,7 +72,7 @@
         <param name="description" value="" />
         <param name="enabled" value="true" />
         <param name="environment" value="AZURE" />
-        <param name="name" value="Xenko Teamcity" />
+        <param name="name" value="Stride Teamcity" />
         <param name="next-hour" value="" />
         <param name="profileId" value="arm-2" />
         <param name="profileServerUrl" value="" />

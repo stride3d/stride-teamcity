@@ -2,14 +2,14 @@
 
 * Start from an Azure Win10 VM
 * Git for windows
-* Same as Xenko README.md: Visual Studio, FBX SDK
+* Same as Stride README.md: Visual Studio, FBX SDK
 * Visual C++ 2013 runtime (x64 & x86)
 
 ## Install teamcity agent
 
 * Don't install as service
 * Set build and temp paths to D: instead of C:
-* Also let it build a few stuff, so that it will precache a recent Xenko git on C: (faster warmup time when cloning VM)
+* Also let it build a few stuff, so that it will precache a recent Stride git on C: (faster warmup time when cloning VM)
 
 ## Auto start
 
@@ -41,7 +41,7 @@ Windows Registry Editor Version 5.00
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon]
 "AutoAdminLogon"="1"
-"DefaultUserName"="xenko"
+"DefaultUserName"="stride"
 "DefaultPassword"="Replace with VM password!!"
 ```
 

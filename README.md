@@ -1,3 +1,3 @@
-# Xenko Teamcity
+# Stride Teamcity
 
-This contains the live configuration for [Xenko Teamcity](https://teamcity.xenko.com).
+This contains the live configuration for [Stride Teamcity](https://teamcity.stride3d.net).

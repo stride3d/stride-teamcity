@@ -23,7 +23,7 @@
           <param name="jetbrains_powershell_noprofile" value="true" />
           <param name="jetbrains_powershell_script_code"><![CDATA[cd ipas
 $ipa_files = Get-ChildItem -recurse | Where-Object { $_.Name -match ".ipa" }
-foreach($file in $ipa_files) { %env.SiliconStudioXenkoDir%\Bin\Windows-Direct3D11\ideviceinstaller.exe -g $file.FullName; echo $file.FullName; sleep 5; }]]></param>
+foreach($file in $ipa_files) { %env.SiliconStudioStrideDir%\Bin\Windows-Direct3D11\ideviceinstaller.exe -g $file.FullName; echo $file.FullName; sleep 5; }]]></param>
           <param name="jetbrains_powershell_script_mode" value="CODE" />
           <param name="teamcity.step.mode" value="default" />
         </parameters>
@@ -33,11 +33,11 @@ foreach($file in $ipa_files) { %env.SiliconStudioXenkoDir%\Bin\Windows-Direct3D1
           <param name="jetbrains_powershell_execution" value="PS1" />
           <param name="jetbrains_powershell_noprofile" value="true" />
           <param name="jetbrains_powershell_script_code"><![CDATA[mkdir build
-echo "null" > build\Xenko.sln
+echo "null" > build\Stride.sln
 mkdir screenshots
-taskkill /IM SiliconStudio.Xenko.ConnectionRouter.exe /f
+taskkill /IM SiliconStudio.Stride.ConnectionRouter.exe /f
 sleep 2
-start Bin\Windows-Direct3D11\SiliconStudio.Xenko.ConnectionRouter.exe
+start Bin\Windows-Direct3D11\SiliconStudio.Stride.ConnectionRouter.exe
 sleep 2]]></param>
           <param name="jetbrains_powershell_script_mode" value="CODE" />
           <param name="teamcity.step.mode" value="default" />
@@ -75,7 +75,7 @@ sleep 2]]></param>
         <parameters>
           <param name="jetbrains_powershell_execution" value="PS1" />
           <param name="jetbrains_powershell_noprofile" value="true" />
-          <param name="jetbrains_powershell_script_code" value="taskkill /IM SiliconStudio.Xenko.ConnectionRouter.exe /f" />
+          <param name="jetbrains_powershell_script_code" value="taskkill /IM SiliconStudio.Stride.ConnectionRouter.exe /f" />
           <param name="jetbrains_powershell_script_mode" value="CODE" />
           <param name="teamcity.step.mode" value="default" />
         </parameters>
@@ -92,14 +92,14 @@ Invoke-WebRequest -Uri http://XXX/teamcity_upload.php -Method POST -Body $params
       </runner>
     </build-runners>
     <vcs-settings>
-      <vcs-entry-ref root-id="Xenko" />
+      <vcs-entry-ref root-id="Stride" />
     </vcs-settings>
     <requirements />
     <build-triggers />
     <artifact-dependencies>
       <dependency id="ARTIFACT_DEPENDENCY_9" sourceBuildTypeId="Engine_Package_BuildPackage" cleanDestination="true">
         <revisionRule name="sameChainOrLastFinished" revision="latest.sameChainOrLastFinished" />
-        <artifact sourcePath="build\Xenko.*.nupkg!** =&gt; ." />
+        <artifact sourcePath="build\Stride.*.nupkg!** =&gt; ." />
       </dependency>
     </artifact-dependencies>
     <dependencies>

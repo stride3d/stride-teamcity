@@ -9,14 +9,14 @@
       <option name="maximumNumberOfBuilds" value="1" />
     </options>
     <parameters>
-      <param name="reverse.dep.*.env.XenkoOfficialBuild" value="" spec="checkbox label='Official Build' description='If unchecked, beta00123-g&lt;githash&gt; will be appended to nupkg' display='prompt' checkedValue='true'" />
+      <param name="reverse.dep.*.env.StrideOfficialBuild" value="" spec="checkbox label='Official Build' description='If unchecked, beta00123-g&lt;githash&gt; will be appended to nupkg' display='prompt' checkedValue='true'" />
     </parameters>
     <build-runners>
       <runner id="RUNNER_13" name="Update build number with actual version" type="jetbrains_powershell">
         <parameters>
           <param name="jetbrains_powershell_execution" value="PS1" />
           <param name="jetbrains_powershell_noprofile" value="true" />
-          <param name="jetbrains_powershell_script_code" value="&quot;##teamcity[buildNumber '{0}']&quot; -f (Get-ChildItem -Path .\Xenko.VisualStudio.Package.*.nupkg -Name) -replace 'Xenko\.VisualStudio\.Package\.(.*).nupkg','$1' | Write-Host" />
+          <param name="jetbrains_powershell_script_code" value="&quot;##teamcity[buildNumber '{0}']&quot; -f (Get-ChildItem -Path .\Stride.VisualStudio.Package.*.nupkg -Name) -replace 'Stride\.VisualStudio\.Package\.(.*).nupkg','$1' | Write-Host" />
           <param name="jetbrains_powershell_script_mode" value="CODE" />
           <param name="teamcity.build.workingDir" value="build" />
           <param name="teamcity.step.mode" value="default" />
@@ -24,7 +24,7 @@
       </runner>
       <runner id="RUNNER_14" name="" type="MSBuild">
         <parameters>
-          <param name="build-file-path" value="build\Xenko.build" />
+          <param name="build-file-path" value="build\Stride.build" />
           <param name="dotNetCoverage.NCover.HTMLReport.File.Sort" value="0" />
           <param name="dotNetCoverage.NCover.HTMLReport.File.Type" value="1" />
           <param name="dotNetCoverage.NCover.Reg" value="selected" />
@@ -42,7 +42,7 @@
           <param name="dotNetCoverage.dotCover.home.path" value="%teamcity.tool.JetBrains.dotCover.CommandLineTools.DEFAULT%" />
           <param name="msbuild_version" value="16.0" />
           <param name="run-platform" value="x86" />
-          <param name="runnerArgs" value="/p:XenkoStoreUrl=%XenkoStoreUrl% /p:XenkoStoreApiKey=%XenkoStoreApiKey%" />
+          <param name="runnerArgs" value="/p:StrideStoreUrl=%StrideStoreUrl% /p:StrideStoreApiKey=%StrideStoreApiKey%" />
           <param name="targets" value="PublishVSIX" />
           <param name="teamcity.step.mode" value="default" />
           <param name="toolsVersion" value="Current" />
@@ -52,7 +52,7 @@
         <parameters>
           <param name="jetbrains_powershell_execution" value="PS1" />
           <param name="jetbrains_powershell_noprofile" value="true" />
-          <param name="jetbrains_powershell_script_code" value="&quot;##teamcity[buildStatus text='{build.status.text} - deployed %build.number% to %XenkoStoreUrl%']&quot; | Write-Host" />
+          <param name="jetbrains_powershell_script_code" value="&quot;##teamcity[buildStatus text='{build.status.text} - deployed %build.number% to %StrideStoreUrl%']&quot; | Write-Host" />
           <param name="jetbrains_powershell_script_mode" value="CODE" />
           <param name="teamcity.build.workingDir" value="build" />
           <param name="teamcity.step.mode" value="default" />
@@ -60,7 +60,7 @@
       </runner>
     </build-runners>
     <vcs-settings>
-      <vcs-entry-ref root-id="Xenko" />
+      <vcs-entry-ref root-id="Stride" />
     </vcs-settings>
     <requirements />
     <build-triggers />
@@ -70,7 +70,7 @@
           <param name="branchFilter" value="+:*" />
           <param name="labelingPattern" value="vsix/%build.number%" />
           <param name="successfulOnly" value="true" />
-          <param name="vcsRootId" value="Xenko" />
+          <param name="vcsRootId" value="Stride" />
         </parameters>
       </extension>
     </build-extensions>

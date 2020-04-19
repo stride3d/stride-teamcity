@@ -4,24 +4,24 @@
   <description />
   <settings>
     <options>
-      <option name="artifactRules" value="xenko-docs/_site/ =&gt; xenko_doc.zip&#xA;xenko-docs/web.config =&gt; xenko_doc.zip" />
+      <option name="artifactRules" value="stride-docs/_site/ =&gt; stride_doc.zip&#xA;stride-docs/web.config =&gt; stride_doc.zip" />
     </options>
     <parameters />
     <build-runners>
       <runner id="RUNNER_9" name="Build Website" type="simpleRunner">
         <parameters>
           <param name="command.executable" value="build.bat" />
-          <param name="teamcity.build.workingDir" value="xenko-docs" />
+          <param name="teamcity.build.workingDir" value="stride-docs" />
           <param name="teamcity.step.mode" value="default" />
         </parameters>
       </runner>
     </build-runners>
     <vcs-settings>
-      <vcs-entry-ref root-id="Xenko">
-        <checkout-rule rule="+:. =&gt; xenko" />
+      <vcs-entry-ref root-id="Stride">
+        <checkout-rule rule="+:. =&gt; stride" />
       </vcs-entry-ref>
-      <vcs-entry-ref root-id="Documentation_XenkoDocs">
-        <checkout-rule rule="+:. =&gt; xenko-docs" />
+      <vcs-entry-ref root-id="Documentation_StrideDocs">
+        <checkout-rule rule="+:. =&gt; stride-docs" />
       </vcs-entry-ref>
     </vcs-settings>
     <requirements />
@@ -31,7 +31,7 @@
           <param name="branchFilter" value="+:*" />
           <param name="enableQueueOptimization" value="true" />
           <param name="quietPeriodMode" value="DO_NOT_USE" />
-          <param name="triggerRules" value="+:xenko-docs/**" />
+          <param name="triggerRules" value="+:stride-docs/**" />
         </parameters>
       </build-trigger>
     </build-triggers>

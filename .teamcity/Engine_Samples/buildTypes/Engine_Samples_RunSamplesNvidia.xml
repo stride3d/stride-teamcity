@@ -11,7 +11,7 @@
       <runner id="RUNNER_19" name="Setup folders and extract package" type="simpleRunner">
         <parameters>
           <param name="script.content"><![CDATA[mkdir build
-echo "null" > build\Xenko.sln
+echo "null" > build\Stride.sln
 mkdir screenshots
 xcopy /Y C:\VSLibs\*.dll samples\Others\NativeLinking\Bin\Windows\Debug\
 cd tools
@@ -26,9 +26,9 @@ packageinstall.exe /extract]]></param>
           <param name="jetbrains_powershell_noprofile" value="true" />
           <param name="jetbrains_powershell_script_code"><![CDATA[adb kill-server
 sleep 2
-taskkill /IM SiliconStudio.Xenko.ConnectionRouter.exe /f
+taskkill /IM SiliconStudio.Stride.ConnectionRouter.exe /f
 sleep 2
-start Bin\Windows\SiliconStudio.Xenko.ConnectionRouter.exe
+start Bin\Windows\SiliconStudio.Stride.ConnectionRouter.exe
 sleep 2]]></param>
           <param name="jetbrains_powershell_script_mode" value="CODE" />
           <param name="teamcity.step.mode" value="default" />
@@ -66,7 +66,7 @@ sleep 2]]></param>
         <parameters>
           <param name="jetbrains_powershell_execution" value="PS1" />
           <param name="jetbrains_powershell_noprofile" value="true" />
-          <param name="jetbrains_powershell_script_code"><![CDATA[taskkill /IM SiliconStudio.Xenko.ConnectionRouter.exe /f
+          <param name="jetbrains_powershell_script_code"><![CDATA[taskkill /IM SiliconStudio.Stride.ConnectionRouter.exe /f
 sleep 2
 taskkill /IM adb.exe /f
 sleep 2
@@ -88,14 +88,14 @@ Invoke-WebRequest -Uri http://XXXX/teamcity_upload.php -Method POST -Body $param
       </runner>
     </build-runners>
     <vcs-settings>
-      <vcs-entry-ref root-id="Xenko" />
+      <vcs-entry-ref root-id="Stride" />
     </vcs-settings>
     <requirements />
     <build-triggers />
     <artifact-dependencies>
       <dependency id="ARTIFACT_DEPENDENCY_4" sourceBuildTypeId="Engine_Package_BuildPackage" cleanDestination="true">
         <revisionRule name="sameChainOrLastFinished" revision="latest.sameChainOrLastFinished" />
-        <artifact sourcePath="build\Xenko.*.nupkg!** =&gt; .&#xD;&#xA;Windows-Direct3D11-Extra.zip!** =&gt; ." />
+        <artifact sourcePath="build\Stride.*.nupkg!** =&gt; .&#xD;&#xA;Windows-Direct3D11-Extra.zip!** =&gt; ." />
       </dependency>
       <dependency id="ARTIFACT_DEPENDENCY_5" sourceBuildTypeId="Engine_Samples_SamplesD3d" cleanDestination="false">
         <revisionRule name="sameChainOrLastFinished" revision="latest.sameChainOrLastFinished" />

@@ -1,6 +1,6 @@
 The MIT License (MIT)
 
-Copyright (c) 2018 Xenko contributors (https://xenko.com)  
+Copyright (c) 2018 Stride contributors (https://stride3d.net)  
 
 All rights reserved.
 

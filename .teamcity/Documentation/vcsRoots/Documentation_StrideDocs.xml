@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<vcs-root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="2bbd4ba3-fbc6-4d2b-862b-1e82dcfe5aa5" type="jetbrains.git" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
-  <name>xenko-teamcity</name>
+<vcs-root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="44551fa8-d53d-4a7c-a2ae-8c812c3ecdcd" type="jetbrains.git" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>stride-docs</name>
   <param name="agentCleanFilesPolicy" value="ALL_UNTRACKED" />
-  <param name="agentCleanPolicy" value="ON_BRANCH_CHANGE" />
+  <param name="agentCleanPolicy" value="ALWAYS" />
   <param name="authMethod" value="TEAMCITY_SSH_KEY" />
   <param name="branch" value="refs/heads/master" />
   <param name="ignoreKnownHosts" value="true" />
   <param name="submoduleCheckout" value="CHECKOUT" />
+  <param name="teamcity:branchSpec" value="refs/heads/*" />
   <param name="teamcitySshKey" value="GitHub" />
-  <param name="url" value="git@github.com:xenko3d/xenko-teamcity.git" />
+  <param name="url" value="git@github.com:stride3d/stride-docs.git" />
   <param name="useAlternates" value="true" />
   <param name="usernameStyle" value="USERID" />
 </vcs-root>

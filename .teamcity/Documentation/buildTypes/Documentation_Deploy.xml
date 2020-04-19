@@ -11,7 +11,7 @@
     <parameters>
       <param name="deployment_folder" value="3.1" spec="text display='normal' validationMode='any'" />
       <param name="deployment_password" value="credentialsJSON:67959a47-9615-403f-958c-247d9c8adfb8" spec="password display='prompt'" />
-      <param name="deployment_profile" value="build/xenko-doc.azurewebsites.net.PublishSettings" spec="text display='prompt' validationMode='any'" />
+      <param name="deployment_profile" value="build/stride-doc.azurewebsites.net.PublishSettings" spec="text display='prompt' validationMode='any'" />
     </parameters>
     <build-runners>
       <runner id="RUNNER_45" name="Deploy documentation to Azure" type="jetbrains_powershell">
@@ -35,8 +35,8 @@ if(!$folder)
 
 
 # Deploy doc on the target
-Write-Host Executing `'build/WAWSDeploy.exe xenko_doc.zip "%deployment_profile%" /v /t $folder /d /p %deployment_password%`'
-build/WAWSDeploy.exe xenko_doc.zip "%deployment_profile%" /v /t $folder /d /p %deployment_password%]]></param>
+Write-Host Executing `'build/WAWSDeploy.exe stride_doc.zip "%deployment_profile%" /v /t $folder /d /p %deployment_password%`'
+build/WAWSDeploy.exe stride_doc.zip "%deployment_profile%" /v /t $folder /d /p %deployment_password%]]></param>
           <param name="jetbrains_powershell_script_mode" value="CODE" />
           <param name="teamcity.step.mode" value="default" />
         </parameters>
@@ -49,7 +49,7 @@ build/WAWSDeploy.exe xenko_doc.zip "%deployment_profile%" /v /t $folder /d /p %d
       </runner>
     </build-runners>
     <vcs-settings>
-      <vcs-entry-ref root-id="Documentation_XenkoDocs" />
+      <vcs-entry-ref root-id="Documentation_StrideDocs" />
     </vcs-settings>
     <requirements />
     <build-triggers />

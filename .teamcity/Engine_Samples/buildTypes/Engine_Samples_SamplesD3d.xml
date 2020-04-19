@@ -10,7 +10,7 @@
     <build-runners>
       <runner id="RUNNER_3" name="Samples Builder" type="MSBuild">
         <parameters>
-          <param name="build-file-path" value="build\XenkoSamples.build" />
+          <param name="build-file-path" value="build\StrideSamples.build" />
           <param name="dotNetCoverage.NCover.HTMLReport.File.Sort" value="0" />
           <param name="dotNetCoverage.NCover.HTMLReport.File.Type" value="1" />
           <param name="dotNetCoverage.NCover.Reg" value="selected" />
@@ -35,14 +35,14 @@
       </runner>
     </build-runners>
     <vcs-settings>
-      <vcs-entry-ref root-id="Xenko" />
+      <vcs-entry-ref root-id="Stride" />
     </vcs-settings>
     <requirements />
     <build-triggers />
     <artifact-dependencies>
       <dependency id="ARTIFACT_DEPENDENCY_3" sourceBuildTypeId="Engine_Package_BuildPackage" cleanDestination="false">
         <revisionRule name="sameChainOrLastFinished" revision="latest.sameChainOrLastFinished" />
-        <artifact sourcePath="build\Xenko.*.nupkg!** =&gt; ." />
+        <artifact sourcePath="build\Stride.*.nupkg!** =&gt; ." />
       </dependency>
     </artifact-dependencies>
     <dependencies>

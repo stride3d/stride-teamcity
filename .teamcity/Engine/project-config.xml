@@ -6,9 +6,9 @@
     <extension id="PROJECT_EXT_4" type="IssueTracker">
       <parameters>
         <param name="authType" value="anonymous" />
-        <param name="name" value="Xenko GitHub" />
+        <param name="name" value="Stride GitHub" />
         <param name="pattern" value="#(\d+)" />
-        <param name="repository" value="https://github.com/xenko3d/xenko" />
+        <param name="repository" value="https://github.com/stride3d/stride" />
         <param name="secure:accessToken" value="" />
         <param name="secure:password" value="" />
         <param name="type" value="GithubIssues" />

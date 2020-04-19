@@ -4,7 +4,7 @@
   <description />
   <settings>
     <options>
-      <option name="artifactRules" value="build/.nuget/NuGet.exe =&gt; build/.nuget&#xA;bin/launcher/*.nupkg =&gt; bin/launcher&#xA;bin/launcher/XenkoSetup*.exe =&gt; bin/launcher&#xA;build/Xenko.build =&gt; build" />
+      <option name="artifactRules" value="build/.nuget/NuGet.exe =&gt; build/.nuget&#xA;bin/launcher/*.nupkg =&gt; bin/launcher&#xA;bin/launcher/StrideSetup*.exe =&gt; bin/launcher&#xA;build/Stride.build =&gt; build" />
     </options>
     <parameters>
       <param name="CustomInstaller" value="" spec="text validationMode='any'" />
@@ -13,7 +13,7 @@
     <build-runners>
       <runner id="RUNNER_12" name="" type="MSBuild">
         <parameters>
-          <param name="build-file-path" value="build/Xenko.build" />
+          <param name="build-file-path" value="build/Stride.build" />
           <param name="dotNetCoverage.NCover.HTMLReport.File.Sort" value="0" />
           <param name="dotNetCoverage.NCover.HTMLReport.File.Type" value="1" />
           <param name="dotNetCoverage.NCover.Reg" value="selected" />
@@ -41,7 +41,7 @@
         <parameters>
           <param name="jetbrains_powershell_execution" value="PS1" />
           <param name="jetbrains_powershell_noprofile" value="true" />
-          <param name="jetbrains_powershell_script_code" value="&quot;##teamcity[buildNumber '{0}']&quot; -f (Get-ChildItem -Path .\Xenko.Launcher.*.nupkg -Name) -replace 'Xenko\.Launcher\.(.*).nupkg','$1' | Write-Host" />
+          <param name="jetbrains_powershell_script_code" value="&quot;##teamcity[buildNumber '{0}']&quot; -f (Get-ChildItem -Path .\Stride.Launcher.*.nupkg -Name) -replace 'Stride\.Launcher\.(.*).nupkg','$1' | Write-Host" />
           <param name="jetbrains_powershell_script_mode" value="CODE" />
           <param name="teamcity.build.workingDir" value="sources/launcher/build" />
           <param name="teamcity.step.mode" value="default" />
@@ -49,7 +49,7 @@
       </runner>
     </build-runners>
     <vcs-settings>
-      <vcs-entry-ref root-id="Xenko" />
+      <vcs-entry-ref root-id="Stride" />
     </vcs-settings>
     <requirements />
     <build-triggers>
@@ -69,7 +69,7 @@
           <param name="github_host" value="https://api.github.com" />
           <param name="publisherId" value="githubStatusPublisher" />
           <param name="secure:github_access_token" value="credentialsJSON:df649119-0086-4cc6-bde6-e1fa7127681b" />
-          <param name="vcsRootId" value="Xenko" />
+          <param name="vcsRootId" value="Stride" />
         </parameters>
       </extension>
     </build-extensions>

@@ -2,8 +2,8 @@
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" parent-id="Engine" uuid="ed546225-e131-45f3-a35c-3c9b9fc06d95" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
   <name>Samples</name>
   <parameters>
-    <param name="env.XenkoDir" value="%system.teamcity.build.workingDir%" />
-    <param name="env.XenkoDisableAssetCompilerExecServerProxy" value="true" />
+    <param name="env.StrideDir" value="%system.teamcity.build.workingDir%" />
+    <param name="env.StrideDisableAssetCompilerExecServerProxy" value="true" />
   </parameters>
   <cleanup />
 </project>

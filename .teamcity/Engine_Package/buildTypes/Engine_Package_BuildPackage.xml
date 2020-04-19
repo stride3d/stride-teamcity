@@ -5,21 +5,21 @@
   <settings>
     <options>
       <option name="allowExternalStatus" value="true" />
-      <option name="artifactRules" value="bin/packages/**/*.nupkg =&gt; bin/packages&#xA;bin/vsix/**/*.nupkg =&gt; bin/vsix&#xA;build/Xenko.build =&gt; build&#xA;build/Xenko.version =&gt; build&#xA;build/.nuget/NuGet.exe =&gt; build/.nuget" />
+      <option name="artifactRules" value="bin/packages/**/*.nupkg =&gt; bin/packages&#xA;bin/vsix/**/*.nupkg =&gt; bin/vsix&#xA;build/Stride.build =&gt; build&#xA;build/Stride.version =&gt; build&#xA;build/.nuget/NuGet.exe =&gt; build/.nuget" />
     </options>
     <disabled-settings>
       <setting-ref ref="RUNNER_11" />
       <setting-ref ref="vcsTrigger" />
     </disabled-settings>
     <parameters>
-      <param name="XenkoGraphicsApiDependentBuildAll" value="true" spec="checkbox label='Build all graphics platforms' uncheckedValue='false' display='normal' checkedValue='true'" />
-      <param name="XenkoPlatforms" value="Windows;Android;UWP;iOS;Linux;macOS" spec="select data_6='macOS' data_5='Linux' display='normal' multiple='true' valueSeparator=';' label='Platforms' data_2='UWP' data_1='Windows' data_4='Android' data_3='iOS'" />
-      <param name="env.XenkoOfficialBuild" value="" spec="checkbox checkedValue='true'" />
+      <param name="StrideGraphicsApiDependentBuildAll" value="true" spec="checkbox label='Build all graphics platforms' uncheckedValue='false' display='normal' checkedValue='true'" />
+      <param name="StridePlatforms" value="Windows;Android;UWP;iOS;Linux;macOS" spec="select data_6='macOS' data_5='Linux' display='normal' multiple='true' valueSeparator=';' label='Platforms' data_2='UWP' data_1='Windows' data_4='Android' data_3='iOS'" />
+      <param name="env.StrideOfficialBuild" value="" spec="checkbox checkedValue='true'" />
     </parameters>
     <build-runners>
       <runner id="RUNNER_10" name="" type="MSBuild">
         <parameters>
-          <param name="build-file-path" value="build\Xenko.build" />
+          <param name="build-file-path" value="build\Stride.build" />
           <param name="dotNetCoverage.NCover.HTMLReport.File.Sort" value="0" />
           <param name="dotNetCoverage.NCover.HTMLReport.File.Type" value="1" />
           <param name="dotNetCoverage.NCover.Reg" value="selected" />
@@ -37,7 +37,7 @@
           <param name="dotNetCoverage.dotCover.home.path" value="%teamcity.tool.JetBrains.dotCover.CommandLineTools.DEFAULT%" />
           <param name="msbuild_version" value="16.0" />
           <param name="run-platform" value="x86" />
-          <param name="runnerArgs" value="/nr:false /p:XenkoPlatforms=&quot;%XenkoPlatforms%&quot; /p:XenkoGraphicsApiDependentBuildAll=%XenkoGraphicsApiDependentBuildAll%" />
+          <param name="runnerArgs" value="/nr:false /p:StridePlatforms=&quot;%StridePlatforms%&quot; /p:StrideGraphicsApiDependentBuildAll=%StrideGraphicsApiDependentBuildAll%" />
           <param name="targets" value="Package" />
           <param name="teamcity.step.mode" value="default" />
           <param name="toolsVersion" value="Current" />
@@ -47,7 +47,7 @@
         <parameters>
           <param name="jetbrains_powershell_execution" value="PS1" />
           <param name="jetbrains_powershell_noprofile" value="true" />
-          <param name="jetbrains_powershell_script_code" value="&quot;##teamcity[buildNumber '{0}']&quot; -f (Get-Content .\Xenko.version) | Write-Host" />
+          <param name="jetbrains_powershell_script_code" value="&quot;##teamcity[buildNumber '{0}']&quot; -f (Get-Content .\Stride.version) | Write-Host" />
           <param name="jetbrains_powershell_script_mode" value="CODE" />
           <param name="teamcity.build.workingDir" value="build" />
           <param name="teamcity.step.mode" value="default" />
@@ -55,7 +55,7 @@
       </runner>
     </build-runners>
     <vcs-settings>
-      <vcs-entry-ref root-id="Xenko" />
+      <vcs-entry-ref root-id="Stride" />
     </vcs-settings>
     <requirements />
     <build-triggers>
@@ -73,7 +73,7 @@
           <param name="github_host" value="https://api.github.com" />
           <param name="publisherId" value="githubStatusPublisher" />
           <param name="secure:github_access_token" value="credentialsJSON:df649119-0086-4cc6-bde6-e1fa7127681b" />
-          <param name="vcsRootId" value="Xenko" />
+          <param name="vcsRootId" value="Stride" />
         </parameters>
       </extension>
     </build-extensions>
