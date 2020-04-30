@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="1ca1ff98-86b9-490f-9bad-f3590cabf63a" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
   <name>Purge StackPath Cache</name>
-  <description />
+  <description>Purge StackPath Cache</description>
   <settings>
     <parameters>
       <param name="StackPathApiKeySecret" value="credentialsJSON:ca50f1d8-904d-4bf0-88f5-cb095f92aacd" spec="password display='prompt'" />
