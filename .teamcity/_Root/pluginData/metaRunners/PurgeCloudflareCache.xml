@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<meta-runner name="Purge StackPath Cache">
+<meta-runner name="Purge CloudFlare Cache">
   <description>Build configuration created from meta-runner PurgeCloudflareCache</description>
   <settings>
     <parameters>
