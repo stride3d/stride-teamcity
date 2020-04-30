@@ -31,7 +31,7 @@
       </runner>
       <runner id="RUNNER_4" name="" type="PurgeCloudflareCache">
         <parameters>
-          <param name="CloudflareApiKey" value="zxx06124ba943b8026eace74fc24dea0c32de62ad1f265464c7990a3aab55fa744973b0722275d5f162" />
+          <param name="StackPathApiKeySecret" value="zxx7cb8372aa33e7a61d8b817dc8d307d3834bff551a0ed5855d8005ed05dfec88a27bfdd0247d3dda5ffb1c3495476120b698767a5df29169bf009424f977d9bfc775d03cbe80d301b" />
           <param name="teamcity.step.mode" value="default" />
         </parameters>
       </runner>
