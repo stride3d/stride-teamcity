@@ -3,7 +3,9 @@
   <name>Purge StackPath Cache</name>
   <description />
   <settings>
-    <parameters />
+    <parameters>
+      <param name="StackPathApiKeySecret" value="credentialsJSON:ca50f1d8-904d-4bf0-88f5-cb095f92aacd" spec="password display='prompt'" />
+    </parameters>
     <build-runners>
       <runner id="RUNNER_48" name="Purge StackPath Cache" type="jetbrains_powershell">
         <parameters>
