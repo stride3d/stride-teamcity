@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<meta-runner name="Purge StackPath Cache">
+  <description>Purge StackPath Cache</description>
+  <settings>
+    <parameters>
+      <param name="StackPathApiKeySecret" value="credentialsJSON:ca50f1d8-904d-4bf0-88f5-cb095f92aacd" spec="password display='prompt'" />
+    </parameters>
+    <build-runners>
+      <runner name="Purge StackPath Cache" type="jetbrains_powershell">
+        <parameters>
+          <param name="jetbrains_powershell_errorToError" value="true" />
+          <param name="jetbrains_powershell_execution" value="PS1" />
+          <param name="jetbrains_powershell_noprofile" value="true" />
+          <param name="jetbrains_powershell_script_code"><![CDATA[$auth = [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+        Invoke-RestMethod -Method POST "https://gateway.stackpath.com/identity/v1/oauth2/token" -Body '{ "client_id": "4ea6ac248f87ed1bd15fefe8c9098881", "client_secret": "%StackPathApiKeySecret%", "grant_type": "client_credentials" }' -ContentType application/json
+if($auth -and $auth.access_token)
+{
+    [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+    Invoke-WebRequest -Method POST "https://gateway.stackpath.com/cdn/v1/stacks/xenko-f379fc/purge" -Headers @{ "Authorization" = "Bearer $($auth.access_token)" } -ContentType application/json -Body '{"items":[{"url":"//stride3d.net/", "recursive":true}]}'
+}]]></param>
+          <param name="jetbrains_powershell_script_mode" value="CODE" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <requirements />
+  </settings>
+</meta-runner>
+
