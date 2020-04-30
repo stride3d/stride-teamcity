@@ -4,7 +4,22 @@
   <description />
   <settings>
     <parameters />
-    <build-runners />
+    <build-runners>
+      <runner id="RUNNER_48" name="Purge StackPath Cache" type="jetbrains_powershell">
+        <parameters>
+          <param name="jetbrains_powershell_errorToError" value="true" />
+          <param name="jetbrains_powershell_execution" value="PS1" />
+          <param name="jetbrains_powershell_noprofile" value="true" />
+          <param name="jetbrains_powershell_script_code"><![CDATA[$auth = Invoke-RestMethod -Method POST "https://gateway.stackpath.com/identity/v1/oauth2/token" -Body '{ "client_id": "4ea6ac248f87ed1bd15fefe8c9098881", "client_secret": "e6796179fb376f0b2f261aa974487605beae16e93b7879fea73f77ae31e74ca8", "grant_type": "client_credentials" }' -ContentType application/json
+if($auth -and $auth.access_token)
+{
+	Invoke-WebRequest -Method POST "https://gateway.stackpath.com/cdn/v1/stacks/xenko-f379fc/purge" -Headers @{ "Authorization" = "Bearer $($auth.access_token)" } -ContentType application/json -Body '{"items":[{"url":"//stride3d.net/", "recursive":true}]}'
+}]]></param>
+          <param name="jetbrains_powershell_script_mode" value="CODE" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
+    </build-runners>
     <vcs-settings />
     <requirements />
     <build-triggers />
