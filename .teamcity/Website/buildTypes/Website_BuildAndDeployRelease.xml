@@ -29,9 +29,9 @@
           <param name="use.custom.script" value="true" />
         </parameters>
       </runner>
-      <runner id="RUNNER_4" name="" type="PurgeCloudflareCache">
+      <runner id="RUNNER_4" name="" type="PurgeStackPathCache">
         <parameters>
-          <param name="StackPathApiKeySecret" value="zxx7cb8372aa33e7a61d8b817dc8d307d3834bff551a0ed5855d8005ed05dfec88a27bfdd0247d3dda5ffb1c3495476120b698767a5df29169bf009424f977d9bfc775d03cbe80d301b" />
+          <param name="StackPathApiKeySecret" value="zxx82a01a420d31ea3b5ab78ce7b6be87906a492e9ab5f58f8a353c68dc59f61eb64d3b84b9b6b9ef97a4eacf58acb03386e4b49af7c6d9dfba0dd79b1f27377ffa775d03cbe80d301b" />
           <param name="teamcity.step.mode" value="default" />
         </parameters>
       </runner>
