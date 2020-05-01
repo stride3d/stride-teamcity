@@ -18,7 +18,7 @@
         <parameters>
           <param name="jetbrains_powershell_execution" value="PS1" />
           <param name="jetbrains_powershell_noprofile" value="true" />
-          <param name="jetbrains_powershell_scriptArguments" value="&quot;%teamcity.build.branch%&quot; &quot;%deployment_version%&quot; &quot;%deployment_profile%&quot; &quot;%deployment_password%&quot;" />
+          <param name="jetbrains_powershell_scriptArguments" value="&quot;%deployment_version%&quot; &quot;%deployment_profile%&quot; &quot;%deployment_password%&quot;" />
           <param name="jetbrains_powershell_script_file" value="build/deploy.ps1" />
           <param name="jetbrains_powershell_script_mode" value="FILE" />
           <param name="teamcity.build.workingDir" value="build" />
