@@ -10,7 +10,7 @@
     </options>
     <parameters>
       <param name="deployment_password" value="credentialsJSON:67959a47-9615-403f-958c-247d9c8adfb8" spec="password display='prompt'" />
-      <param name="deployment_profile" value="build/xenko-doc.azurewebsites.net.PublishSettings" spec="text display='prompt' validationMode='any'" />
+      <param name="deployment_profile" value="xenko-doc.azurewebsites.net.PublishSettings" spec="text display='prompt' validationMode='any'" />
       <param name="deployment_version" value="4.0" spec="text display='prompt' validationMode='any'" />
     </parameters>
     <build-runners>
