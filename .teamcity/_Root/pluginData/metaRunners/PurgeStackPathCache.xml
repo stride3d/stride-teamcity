@@ -16,7 +16,7 @@ $auth = Invoke-RestMethod -Method POST "https://gateway.stackpath.com/identity/v
 if($auth -and $auth.access_token)
 {
     [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
-    Invoke-WebRequest -Method POST "https://gateway.stackpath.com/cdn/v1/stacks/xenko-f379fc/purge" -Headers @{ "Authorization" = "Bearer $($auth.access_token)" } -ContentType application/json -Body '{"items":[{"url":"//stride3d.net/", "recursive":true}]}'
+    Invoke-WebRequest -Method POST "https://gateway.stackpath.com/cdn/v1/stacks/xenko-f379fc/purge" -Headers @{ "Authorization" = "Bearer $($auth.access_token)" } -ContentType application/json -Body '{"items":[{"url":"//stride3d.net/", "recursive":true}]}' -UseBasicParsing
 }]]></param>
           <param name="jetbrains_powershell_script_mode" value="CODE" />
           <param name="teamcity.step.mode" value="default" />
