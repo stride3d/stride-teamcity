@@ -7,13 +7,6 @@
       <param name="AzurePublishPassword" value="credentialsJSON:652c3cbf-5827-4ff5-af4a-f0e2d7025e31" spec="password display='hidden'" />
     </parameters>
     <build-runners>
-      <runner id="RUNNER_1" name="Copy Azure Publish Settings" type="simpleRunner">
-        <parameters>
-          <param name="script.content" value="echo ^&lt;publishData^&gt;^&lt;publishProfile profileName=&quot;xenko-website - Web Deploy&quot; publishMethod=&quot;MSDeploy&quot; publishUrl=&quot;xenko-website.scm.azurewebsites.net:443&quot; msdeploySite=&quot;xenko-website&quot; userName=&quot;$xenko-website&quot; userPWD=&quot;%AzurePublishPassword%&quot; destinationAppUrl=&quot;http://xenko-website.azurewebsites.net&quot; SQLServerDBConnectionString=&quot;&quot; mySQLDBConnectionString=&quot;&quot; hostingProviderForumLink=&quot;&quot; controlPanelLink=&quot;http://windows.azure.com&quot; webSystem=&quot;WebSites&quot;^&gt;^&lt;databases /^&gt;^&lt;/publishProfile^&gt;^&lt;publishProfile profileName=&quot;xenko-website - FTP&quot; publishMethod=&quot;FTP&quot; publishUrl=&quot;ftp://waws-prod-mwh-003.ftp.azurewebsites.windows.net/site/wwwroot&quot; ftpPassiveMode=&quot;True&quot; userName=&quot;xenko-website\$xenko-website&quot; userPWD=&quot;%AzurePublishPassword%&quot; destinationAppUrl=&quot;http://xenko-website.azurewebsites.net&quot; SQLServerDBConnectionString=&quot;&quot; mySQLDBConnectionString=&quot;&quot; hostingProviderForumLink=&quot;&quot; controlPanelLink=&quot;http://windows.azure.com&quot; webSystem=&quot;WebSites&quot;^&gt;^&lt;databases /^&gt;^&lt;/publishProfile^&gt;^&lt;/publishData^&gt; &gt; _deploy\website.PublishSettings" />
-          <param name="teamcity.step.mode" value="default" />
-          <param name="use.custom.script" value="true" />
-        </parameters>
-      </runner>
       <runner id="RUNNER_2" name="Build and Deploy" type="simpleRunner">
         <parameters>
           <param name="script.content" value="call build_and_deploy_website.bat" />
