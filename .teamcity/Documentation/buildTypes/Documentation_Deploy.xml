@@ -19,25 +19,6 @@
           <param name="jetbrains_powershell_execution" value="PS1" />
           <param name="jetbrains_powershell_noprofile" value="true" />
           <param name="jetbrains_powershell_scriptArguments" value="&quot;%teamcity.build.branch%&quot; &quot;%deployment_version%&quot; &quot;%deployment_profile%&quot; &quot;%deployment_password%&quot;" />
-          <param name="jetbrains_powershell_script_code"><![CDATA[# Set the deployment folder 
-$folder = "%deployment_folder%"
-if(!$folder)
-{
-  $branch = "%teamcity.build.branch%"
-  if ($branch -notmatch "^master-\d\.\d+")
-  {
-      Write-Host "You should specify the deployment folder or select a master branch."
-      Write-Host "Cannot determine deployment folder for branch [$branch]."
-      Write-Host "Branch name should be master-x.x for automatic deployment folder detection."
-      exit 1;
-  }
-  $folder = $branch -replace "^master-(\d)\.(\d+)",'$1.$2'
-}
-
-
-# Deploy doc on the target
-Write-Host Executing `'build/WAWSDeploy.exe stride_doc.zip "%deployment_profile%" /v /t $folder /d /p %deployment_password%`'
-build/WAWSDeploy.exe stride_doc.zip "%deployment_profile%" /v /t $folder /d /p %deployment_password%]]></param>
           <param name="jetbrains_powershell_script_file" value="build/deploy.ps1" />
           <param name="jetbrains_powershell_script_mode" value="FILE" />
           <param name="teamcity.build.workingDir" value="build" />
