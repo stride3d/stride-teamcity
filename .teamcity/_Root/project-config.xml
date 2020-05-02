@@ -56,7 +56,7 @@
         <param name="region" value="westus2" />
         <param name="reuseVm" value="true" />
         <param name="source-id" value="xenko-tc" />
-        <param name="storageAccountType" value="Standard_LRS" />
+        <param name="storageAccountType" value="Premium_LRS" />
         <param name="subnetId" value="default" />
         <param name="vmPublicIp" value="false" />
         <param name="vmSize" value="Standard_F4s_v2" />
