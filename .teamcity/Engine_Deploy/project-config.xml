@@ -2,7 +2,7 @@
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" parent-id="Engine" uuid="a2cec223-7eb6-40a4-bebb-b81eaf5c8f4b" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
   <name>Deploy</name>
   <parameters>
-    <param name="StrideStoreApiKey" value="credentialsJSON:ca50f1d8-904d-4bf0-88f5-cb095f92aacd" spec="password label='NuGet Server API Key' display='prompt'" />
+    <param name="StrideStoreApiKey" value="credentialsJSON:e115b8c7-00f3-49f4-91f5-5b92c901380f" spec="password label='NuGet Server API Key' display='prompt'" />
     <param name="StrideStoreUrl" value="https://api.nuget.org/v3/index.json" spec="text label='NuGet Server Push URL' validationMode='any' display='prompt'" />
   </parameters>
   <cleanup />
