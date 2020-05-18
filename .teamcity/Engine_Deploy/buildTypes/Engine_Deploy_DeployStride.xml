@@ -8,9 +8,6 @@
       <option name="buildConfigurationType" value="DEPLOYMENT" />
       <option name="maximumNumberOfBuilds" value="1" />
     </options>
-    <disabled-settings>
-      <setting-ref ref="BUILD_EXT_7" />
-    </disabled-settings>
     <parameters>
       <param name="StridePublishSkipSamplesTemplates" value="true" spec="checkbox display='normal' checkedValue='true'" />
       <param name="reverse.dep.*.env.StrideOfficialBuild" value="" spec="checkbox label='Official Build' description='If unchecked, beta00123-g&lt;githash&gt; will be appended to nupkg' display='prompt' checkedValue='true'" />
