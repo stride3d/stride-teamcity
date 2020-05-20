@@ -3,9 +3,6 @@
   <name>Windows - D3D11</name>
   <description />
   <settings ref="Engine_Tests_WindowsTestsTemplate">
-    <disabled-settings>
-      <setting-ref ref="vcsTrigger" />
-    </disabled-settings>
     <parameters>
       <param name="TestCategories" value="Game" />
     </parameters>
