@@ -8,7 +8,9 @@
     </parameters>
     <build-runners order="RUNNER_43, RUNNER_8" />
     <vcs-settings />
-    <requirements />
+    <requirements>
+      <exists id="RQ_1" name="test-d3d11" />
+    </requirements>
     <build-triggers />
     <cleanup />
   </settings>
