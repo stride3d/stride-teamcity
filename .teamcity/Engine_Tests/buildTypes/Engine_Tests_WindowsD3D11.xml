@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="5544f844-f697-4cc5-8fac-542344bf35f6" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
-  <name>Windows - D3D11</name>
+  <name>Windows - D3D11 - NVIDIA GTX 960</name>
   <description />
   <settings ref="Engine_Tests_WindowsTestsTemplate">
     <parameters>
