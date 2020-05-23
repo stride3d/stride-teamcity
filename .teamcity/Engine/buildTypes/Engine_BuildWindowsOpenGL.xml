@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="d07c61a9-52f6-4e4c-9427-19a52e4f8bb0" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="d07c61a9-52f6-4e4c-9427-19a52e4f8bb0" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2020.1/project-config.xsd">
   <name>Build Windows OpenGL</name>
   <description />
   <settings ref="Engine_BuildRuntimeFromSourceTemplate">
