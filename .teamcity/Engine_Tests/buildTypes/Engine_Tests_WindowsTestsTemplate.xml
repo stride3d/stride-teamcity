@@ -44,7 +44,7 @@ sleep 2]]></param>
           <param name="dotNetCoverage.dotCover.home.path" value="%teamcity.tool.JetBrains.dotCover.CommandLineTools.DEFAULT%" />
           <param name="msbuild_version" value="16.0" />
           <param name="run-platform" value="x86" />
-          <param name="runnerArgs" value="/nr:false /p:StrideTestCategories=%TestCategories%;VisualStudioVersion=15.0" />
+          <param name="runnerArgs" value="/nr:false /p:StrideTestCategories=%TestCategories% /p:StrideGraphicsApis=&quot;%StrideGraphicsApis%&quot; /p:StrideGraphicsApisTest=&quot;%StrideGraphicsApis%&quot;" />
           <param name="targets" value="RunTestsWindows" />
           <param name="teamcity.step.mode" value="default" />
           <param name="teamcity.tests.runRiskGroupTestsFirst" value="recentlyFailed" />
