@@ -3,5 +3,6 @@
   <name>Tests</name>
   <parameters />
   <cleanup />
+  <buildTypesOrder order="Engine_Tests_WindowsSimple,Engine_Tests_WindowsD3D11,Engine_Tests_WindowsVulkanNvidiaGTX960,Engine_Tests_WindowsSamplesD3D,Engine_Tests_WindowsVSPackage" />
 </project>
 
