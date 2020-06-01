@@ -4,6 +4,7 @@
   <description />
   <settings ref="Engine_Tests_WindowsTestsTemplate">
     <parameters>
+      <param name="StrideGraphicsApis" value="Direct3D11" />
       <param name="TestCategories" value="Game" />
     </parameters>
     <build-runners order="RUNNER_43, RUNNER_8" />
