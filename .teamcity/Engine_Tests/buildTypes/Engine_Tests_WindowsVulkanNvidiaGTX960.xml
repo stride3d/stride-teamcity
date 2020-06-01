@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="6f657949-a453-49d2-9432-9dd3a2122477" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2020.1/project-config.xsd">
+  <name>Windows - Vulkan - NVIDIA GTX 960</name>
+  <description />
+  <settings ref="Engine_Tests_WindowsTestsTemplate">
+    <parameters>
+      <param name="TestCategories" value="Game" />
+    </parameters>
+    <build-runners order="RUNNER_43, RUNNER_8" />
+    <vcs-settings />
+    <requirements>
+      <contains id="RQ_1" name="teamcity.agent.name" value="gfxtest" />
+    </requirements>
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+
