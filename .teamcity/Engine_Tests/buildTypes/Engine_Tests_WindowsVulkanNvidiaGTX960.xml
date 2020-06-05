@@ -3,9 +3,6 @@
   <name>Windows - Vulkan - NVIDIA GTX 960</name>
   <description />
   <settings ref="Engine_Tests_WindowsTestsTemplate">
-    <disabled-settings>
-      <setting-ref ref="vcsTrigger" />
-    </disabled-settings>
     <parameters>
       <param name="StrideGraphicsApis" value="Direct3D11;Vulkan" />
       <param name="StrideGraphicsApisTest" value="Vulkan" />
