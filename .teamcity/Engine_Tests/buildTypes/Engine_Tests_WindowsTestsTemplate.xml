@@ -9,6 +9,7 @@
     </options>
     <parameters>
       <param name="env.STRIDE_BUILD_NUMBER" value="%build.number%" />
+      <param name="env.STRIDE_TESTS_CAPTURE_RENDERDOC_ON_ERROR" value="" spec="checkbox display='normal' checkedValue='true'" />
       <param name="env.StrideDisableAssetCompilerExecServerProxy" value="true" />
     </parameters>
     <build-runners>
