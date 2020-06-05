@@ -52,7 +52,9 @@ sleep 2]]></param>
         </parameters>
       </runner>
     </build-runners>
-    <vcs-settings />
+    <vcs-settings>
+      <vcs-entry-ref root-id="Stride_NoClean" />
+    </vcs-settings>
     <requirements />
     <build-triggers>
       <build-trigger id="vcsTrigger" type="vcsTrigger">
