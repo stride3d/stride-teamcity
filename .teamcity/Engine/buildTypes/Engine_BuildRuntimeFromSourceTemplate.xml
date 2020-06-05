@@ -47,7 +47,6 @@
       </runner>
     </build-runners>
     <vcs-settings>
-      <vcs-entry-ref root-id="Stride" />
       <vcs-entry-ref root-id="Stride_NoClean" />
     </vcs-settings>
     <requirements />
