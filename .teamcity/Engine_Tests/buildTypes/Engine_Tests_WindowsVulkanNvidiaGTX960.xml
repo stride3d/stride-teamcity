@@ -17,6 +17,17 @@
       <contains id="RQ_1" name="teamcity.agent.name" value="gfxtest" />
     </requirements>
     <build-triggers />
+    <build-extensions>
+      <extension id="BUILD_EXT_2" type="commit-status-publisher">
+        <parameters>
+          <param name="github_authentication_type" value="token" />
+          <param name="github_host" value="https://api.github.com" />
+          <param name="publisherId" value="githubStatusPublisher" />
+          <param name="secure:github_access_token" value="credentialsJSON:df649119-0086-4cc6-bde6-e1fa7127681b" />
+          <param name="vcsRootId" value="Stride_NoClean" />
+        </parameters>
+      </extension>
+    </build-extensions>
     <cleanup />
   </settings>
 </build-type>
