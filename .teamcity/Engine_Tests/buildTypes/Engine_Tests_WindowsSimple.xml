@@ -4,6 +4,7 @@
   <description />
   <settings ref="Engine_Tests_WindowsTestsTemplate">
     <parameters>
+      <param name="StrideGraphicsApis" value="" />
       <param name="TestCategories" value="Simple" />
     </parameters>
     <build-runners order="RUNNER_43, RUNNER_8" />
