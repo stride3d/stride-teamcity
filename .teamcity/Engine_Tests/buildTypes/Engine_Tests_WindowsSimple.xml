@@ -4,7 +4,7 @@
   <description />
   <settings ref="Engine_Tests_WindowsTestsTemplate">
     <parameters>
-      <param name="StrideGraphicsApis" value="" />
+      <param name="StrideGraphicsApis" value="Direct3D11" />
       <param name="StrideGraphicsApisTest" value="" />
       <param name="TestCategories" value="Simple" />
     </parameters>
