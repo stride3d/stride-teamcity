@@ -53,7 +53,7 @@ sleep 2]]></param>
       </runner>
     </build-runners>
     <vcs-settings>
-      <vcs-entry-ref root-id="Stride" />
+      <vcs-entry-ref root-id="Engine_Tests_Stride" />
     </vcs-settings>
     <requirements />
     <build-triggers>
