@@ -8,7 +8,6 @@
       <option name="artifactRules" value="bin/packages/**/*.nupkg =&gt; bin/packages&#xA;bin/vsix/**/*.nupkg =&gt; bin/vsix&#xA;build/Stride.build =&gt; build&#xA;build/Stride.version =&gt; build&#xA;build/.nuget/NuGet.exe =&gt; build/.nuget" />
     </options>
     <disabled-settings>
-      <setting-ref ref="RUNNER_11" />
       <setting-ref ref="vcsTrigger" />
     </disabled-settings>
     <parameters>
@@ -42,16 +41,6 @@
           <param name="targets" value="Package" />
           <param name="teamcity.step.mode" value="default" />
           <param name="toolsVersion" value="Current" />
-        </parameters>
-      </runner>
-      <runner id="RUNNER_11" name="Update build number with actual package version" type="jetbrains_powershell">
-        <parameters>
-          <param name="jetbrains_powershell_execution" value="PS1" />
-          <param name="jetbrains_powershell_noprofile" value="true" />
-          <param name="jetbrains_powershell_script_code" value="&quot;##teamcity[buildNumber '{0}']&quot; -f (Get-Content .\Stride.version) | Write-Host" />
-          <param name="jetbrains_powershell_script_mode" value="CODE" />
-          <param name="teamcity.build.workingDir" value="build" />
-          <param name="teamcity.step.mode" value="default" />
         </parameters>
       </runner>
     </build-runners>
