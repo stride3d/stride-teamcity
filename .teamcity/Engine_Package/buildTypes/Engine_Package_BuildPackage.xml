@@ -38,7 +38,7 @@
           <param name="dotNetCoverage.dotCover.home.path" value="%teamcity.tool.JetBrains.dotCover.CommandLineTools.DEFAULT%" />
           <param name="msbuild_version" value="16.0" />
           <param name="run-platform" value="x86" />
-          <param name="runnerArgs" value="/nr:false /p:StridePlatforms=&quot;%StridePlatforms%&quot; /p:StrideGraphicsApiDependentBuildAll=%StrideGraphicsApiDependentBuildAll%" />
+          <param name="runnerArgs" value="/nr:false /p:StridePlatforms=&quot;%StridePlatforms%&quot; /p:StrideGraphicsApiDependentBuildAll=%StrideGraphicsApiDependentBuildAll% /p:StrideEditorTargetFrameworks=%StrideEditorTargetFrameworks%" />
           <param name="targets" value="Package" />
           <param name="teamcity.step.mode" value="default" />
           <param name="toolsVersion" value="Current" />
