@@ -63,6 +63,26 @@
         <param name="vmUsername" value="stride" />
       </parameters>
     </extension>
+    <extension id="PROJECT_EXT_9" type="CloudImage">
+      <parameters>
+        <param name="agent_pool_id" value="0" />
+        <param name="deployTarget" value="Instance" />
+        <param name="imageId" value="jetbrains/teamcity-agent" />
+        <param name="imageType" value="Container" />
+        <param name="imageUrl" value="" />
+        <param name="instanceId" value="/subscriptions/61816513-881b-426e-877a-0f9108b16ecc/resourceGroups/TEAMCITYAGENTS/providers/Microsoft.Compute/virtualMachines/stride-teamcity1" />
+        <param name="maxInstances" value="1" />
+        <param name="memory" value="2" />
+        <param name="numberCores" value="2" />
+        <param name="osType" value="Linux" />
+        <param name="profileId" value="arm-2" />
+        <param name="registryUsername" value="xen2" />
+        <param name="reuseVm" value="false" />
+        <param name="source-id" value="stride-teamcity1" />
+        <param name="vmPublicIp" value="false" />
+        <param name="vmUsername" value="" />
+      </parameters>
+    </extension>
     <extension id="arm-2" type="CloudProfile">
       <parameters>
         <param name="agentPushPreset" value="" />
@@ -77,7 +97,7 @@
         <param name="profileId" value="arm-2" />
         <param name="profileServerUrl" value="" />
         <param name="secure:clientSecret" value="credentialsJSON:9b935358-fe3e-4b94-838a-b530ca0577bb" />
-        <param name="secure:passwords_data" value="credentialsJSON:5ec819c0-76f4-431c-b930-fbf39abacc61" />
+        <param name="secure:passwords_data" value="credentialsJSON:03ca102c-62e6-4457-9739-1b35284a6c99" />
         <param name="subscriptionId" value="61816513-881b-426e-877a-0f9108b16ecc" />
         <param name="system.cloud.profile_id" value="arm-2" />
         <param name="tenantId" value="04bbf5b8-ff80-4a4f-a5f1-4d9cdce844c1" />
