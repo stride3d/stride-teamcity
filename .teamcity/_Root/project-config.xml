@@ -49,7 +49,7 @@
         <param name="imageId" value="/subscriptions/61816513-881b-426e-877a-0f9108b16ecc/resourceGroups/TEAMCITYAGENTS/providers/Microsoft.Compute/images/stride-teamcity-image-20200619140955" />
         <param name="imageType" value="Image" />
         <param name="imageUrl" value="" />
-        <param name="maxInstances" value="1" />
+        <param name="maxInstances" value="0" />
         <param name="networkId" value="/subscriptions/61816513-881b-426e-877a-0f9108b16ecc/resourceGroups/TeamcityAgents/providers/Microsoft.Network/virtualNetworks/TeamcityAgents-vnet" />
         <param name="osType" value="Windows" />
         <param name="profileId" value="arm-2" />
