@@ -60,7 +60,7 @@
         <param name="subnetId" value="default" />
         <param name="vmPublicIp" value="false" />
         <param name="vmSize" value="Standard_F4s_v2" />
-        <param name="vmUsername" value="xenko" />
+        <param name="vmUsername" value="stride" />
       </parameters>
     </extension>
     <extension id="arm-2" type="CloudProfile">
