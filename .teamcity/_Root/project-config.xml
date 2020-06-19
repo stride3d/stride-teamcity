@@ -70,7 +70,7 @@
         <param name="cloud-code" value="arm" />
         <param name="credentialsType" value="service" />
         <param name="description" value="" />
-        <param name="enabled" value="false" />
+        <param name="enabled" value="true" />
         <param name="environment" value="AZURE" />
         <param name="name" value="Stride Teamcity" />
         <param name="next-hour" value="" />
