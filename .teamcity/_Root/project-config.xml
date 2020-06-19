@@ -58,7 +58,7 @@
         <param name="source-id" value="stride-tc" />
         <param name="storageAccountType" value="Standard_LRS" />
         <param name="subnetId" value="default" />
-        <param name="vmPublicIp" value="false" />
+        <param name="vmPublicIp" value="true" />
         <param name="vmSize" value="Standard_F4s_v2" />
         <param name="vmUsername" value="stride" />
       </parameters>
