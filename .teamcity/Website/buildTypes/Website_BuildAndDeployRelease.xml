@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="7e9041d0-694e-4257-8eaf-636e669e01c1" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2020.1/project-config.xsd">
   <name>Build And Deploy - Release (stride3d.net)</name>
-  <description>Build and Deploy of Stride Website from staging to http://staging.stride3d.net</description>
+  <description>Build and Deploy of Stride Website from release to http://stride3d.net</description>
   <settings>
     <parameters>
       <param name="AzurePublishPassword" value="credentialsJSON:652c3cbf-5827-4ff5-af4a-f0e2d7025e31" spec="password display='hidden'" />
