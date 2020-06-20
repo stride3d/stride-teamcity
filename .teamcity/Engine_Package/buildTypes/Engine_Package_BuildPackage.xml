@@ -11,7 +11,7 @@
       <setting-ref ref="vcsTrigger" />
     </disabled-settings>
     <parameters>
-      <param name="StrideEditorTargetFrameworks" value="net472" spec="select multiple='true' valueSeparator=';' data_2='netcoreapp3.1' data_1='net472' display='normal'" />
+      <param name="StrideEditorTargetFrameworks" value="net472;netcoreapp3.1" spec="select multiple='true' valueSeparator=';' data_2='netcoreapp3.1' data_1='net472' display='normal'" />
       <param name="StrideGraphicsApiDependentBuildAll" value="true" spec="checkbox label='Build all graphics platforms' uncheckedValue='false' display='normal' checkedValue='true'" />
       <param name="StridePlatforms" value="Windows;Android;UWP;iOS;Linux;macOS" spec="select data_6='macOS' data_5='Linux' display='normal' multiple='true' valueSeparator=';' label='Platforms' data_2='UWP' data_1='Windows' data_4='Android' data_3='iOS'" />
       <param name="env.StrideOfficialBuild" value="" spec="checkbox checkedValue='true'" />
