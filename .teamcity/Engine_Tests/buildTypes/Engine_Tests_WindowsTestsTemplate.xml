@@ -85,6 +85,14 @@ sleep 2]]></param>
           <param name="withBuildAnchor" value="true" />
         </parameters>
       </extension>
+      <extension id="BUILD_EXT_10" type="pullRequests">
+        <parameters>
+          <param name="authenticationType" value="token" />
+          <param name="filterAuthorRole" value="MEMBER_OR_COLLABORATOR" />
+          <param name="providerType" value="github" />
+          <param name="secure:accessToken" value="credentialsJSON:09e785fe-8617-4b40-ba9d-8d0448320b66" />
+        </parameters>
+      </extension>
     </build-extensions>
     <cleanup />
   </settings>
