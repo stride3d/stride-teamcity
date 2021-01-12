@@ -6,6 +6,9 @@
       <option name="allowExternalStatus" value="true" />
       <option name="artifactRules" value="%BuildLogFile%" />
     </options>
+    <disabled-settings>
+      <setting-ref ref="RUNNER_47" />
+    </disabled-settings>
     <parameters>
       <param name="BuildLogFile" value="BuildLog.Log" />
       <param name="MSBuildLogClause" value="/l:FileLogger,Microsoft.Build.Engine;logfile=%BuildLogFile%;Append" />
