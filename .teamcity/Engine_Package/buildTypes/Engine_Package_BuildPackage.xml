@@ -5,7 +5,7 @@
   <settings>
     <options>
       <option name="allowExternalStatus" value="true" />
-      <option name="artifactRules" value="bin/packages/**/*.nupkg =&gt; bin/packages&#xA;bin/vsix/**/*.nupkg =&gt; bin/vsix&#xA;build/Stride.build =&gt; build&#xA;build/Stride.version =&gt; build&#xA;build/.nuget/NuGet.exe =&gt; build/.nuget" />
+      <option name="artifactRules" value="bin/packages/**/*.nupkg =&gt; bin/packages&#xA;bin/vsix/**/*.nupkg =&gt; bin/vsix&#xA;build/Stride.build =&gt; build&#xA;build/.nuget/NuGet.exe =&gt; build/.nuget" />
     </options>
     <disabled-settings>
       <setting-ref ref="vcsTrigger" />
