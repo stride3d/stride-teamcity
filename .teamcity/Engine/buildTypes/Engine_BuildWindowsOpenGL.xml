@@ -3,9 +3,6 @@
   <name>Build Windows OpenGL</name>
   <description />
   <settings ref="Engine_BuildRuntimeFromSourceTemplate">
-    <disabled-settings>
-      <setting-ref ref="RUNNER_47" />
-    </disabled-settings>
     <parameters>
       <param name="RuntimeBuildTarget" value="WindowsOpenGL" />
     </parameters>
