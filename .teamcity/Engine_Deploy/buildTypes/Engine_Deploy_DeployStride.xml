@@ -8,9 +8,7 @@
       <option name="buildConfigurationType" value="DEPLOYMENT" />
       <option name="maximumNumberOfBuilds" value="1" />
     </options>
-    <parameters>
-      <param name="StridePublishSkipSamplesTemplates" value="true" spec="checkbox display='normal' checkedValue='true'" />
-    </parameters>
+    <parameters />
     <build-runners>
       <runner id="RUNNER_13" name="Update build number with actual package version" type="jetbrains_powershell">
         <parameters>
