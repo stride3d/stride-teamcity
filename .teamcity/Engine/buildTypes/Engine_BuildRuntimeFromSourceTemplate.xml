@@ -4,7 +4,6 @@
   <settings>
     <options>
       <option name="allowExternalStatus" value="true" />
-      <option name="artifactRules" value="%BuildLogFile%" />
     </options>
     <parameters>
       <param name="BuildLogFile" value="BuildLog.Log" />
