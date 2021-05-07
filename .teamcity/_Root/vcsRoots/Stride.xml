@@ -4,10 +4,11 @@
   <param name="agentCleanFilesPolicy" value="ALL_UNTRACKED" />
   <param name="agentCleanPolicy" value="ALWAYS" />
   <param name="authMethod" value="TEAMCITY_SSH_KEY" />
-  <param name="branch" value="refs/heads/master" />
+  <param name="branch" value="master" />
   <param name="ignoreKnownHosts" value="true" />
   <param name="submoduleCheckout" value="CHECKOUT" />
   <param name="teamcity:branchSpec"><![CDATA[+:refs/heads/(feature/*)
++:refs/heads/(master)
 +:refs/heads/(master-*)]]></param>
   <param name="teamcitySshKey" value="GitHub" />
   <param name="url" value="git@github.com:stride3d/stride.git" />
