@@ -7,7 +7,8 @@
   <param name="branch" value="refs/heads/master" />
   <param name="ignoreKnownHosts" value="true" />
   <param name="submoduleCheckout" value="CHECKOUT" />
-  <param name="teamcity:branchSpec" value="+:refs/heads/feature/*" />
+  <param name="teamcity:branchSpec"><![CDATA[+:refs/heads/(master)
++:refs/heads/(feature/*)]]></param>
   <param name="teamcitySshKey" value="GitHub" />
   <param name="url" value="git@github.com:stride3d/stride.git" />
   <param name="useAlternates" value="true" />
