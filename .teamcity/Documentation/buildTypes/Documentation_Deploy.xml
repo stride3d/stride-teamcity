@@ -10,6 +10,7 @@
     </options>
     <parameters>
       <param name="AzurePublishPassword" value="credentialsJSON:3cab913f-8023-41cb-82f7-91164e921ecb" spec="password display='prompt'" />
+      <param name="AzurePublishProfile" value="stride-doc.PublishSettings" />
     </parameters>
     <build-runners>
       <runner id="RUNNER_45" name="Deploy documentation to Azure" type="jetbrains_powershell">
