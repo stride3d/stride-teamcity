@@ -10,7 +10,6 @@
     </options>
     <parameters>
       <param name="AzurePublishPassword" value="credentialsJSON:ca50f1d8-904d-4bf0-88f5-cb095f92aacd" spec="password display='prompt'" />
-      <param name="deployment_password" value="credentialsJSON:67959a47-9615-403f-958c-247d9c8adfb8" spec="password display='prompt'" />
     </parameters>
     <build-runners>
       <runner id="RUNNER_45" name="Deploy documentation to Azure" type="jetbrains_powershell">
