@@ -9,7 +9,7 @@
       <option name="maximumNumberOfBuilds" value="1" />
     </options>
     <parameters>
-      <param name="AzurePublishPassword" value="credentialsJSON:ca50f1d8-904d-4bf0-88f5-cb095f92aacd" spec="password display='prompt'" />
+      <param name="AzurePublishPassword" value="credentialsJSON:3cab913f-8023-41cb-82f7-91164e921ecb" spec="password display='prompt'" />
     </parameters>
     <build-runners>
       <runner id="RUNNER_45" name="Deploy documentation to Azure" type="jetbrains_powershell">
