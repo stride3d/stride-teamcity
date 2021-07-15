@@ -17,7 +17,7 @@
           <param name="jetbrains_powershell_errorToError" value="true" />
           <param name="jetbrains_powershell_execution" value="PS1" />
           <param name="jetbrains_powershell_noprofile" value="true" />
-          <param name="jetbrains_powershell_scriptArguments" value="&quot;%AzurePublishPassword%&quot;" />
+          <param name="jetbrains_powershell_scriptArguments" value="&quot;%AzurePublishProfile%&quot; &quot;%AzurePublishPassword%&quot;" />
           <param name="jetbrains_powershell_script_file" value="build/deploy.ps1" />
           <param name="jetbrains_powershell_script_mode" value="FILE" />
           <param name="teamcity.build.workingDir" value="build" />
