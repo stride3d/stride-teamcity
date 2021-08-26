@@ -15,6 +15,7 @@
       <param name="StrideGraphicsApiDependentBuildAll" value="true" spec="checkbox label='Build all graphics platforms' uncheckedValue='false' display='normal' checkedValue='true'" />
       <param name="StridePlatforms" value="Windows;Android;UWP;iOS;Linux;macOS" spec="select data_6='macOS' data_5='Linux' display='normal' multiple='true' valueSeparator=';' label='Platforms' data_2='UWP' data_1='Windows' data_4='Android' data_3='iOS'" />
       <param name="StrideSign" value="" spec="checkbox label='Code signing' display='normal' checkedValue='true'" />
+      <param name="StrideSignUser" value="sc-stride@dotnetfoundation.org" spec="text display='normal' label='Code signing username' validationMode='any'" />
     </parameters>
     <build-runners>
       <runner id="RUNNER_10" name="" type="MSBuild">
