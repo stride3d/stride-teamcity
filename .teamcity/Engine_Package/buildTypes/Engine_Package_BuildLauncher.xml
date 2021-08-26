@@ -9,6 +9,7 @@
     <parameters>
       <param name="CustomInstaller" value="" spec="text validationMode='any'" />
       <param name="CustomInstallerStoreUrl" value="" spec="text validationMode='any'" />
+      <param name="StrideSign" value="" spec="checkbox display='normal' checkedValue='true' label='Code signing'" />
     </parameters>
     <build-runners>
       <runner id="RUNNER_12" name="" type="MSBuild">
