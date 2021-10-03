@@ -10,7 +10,7 @@
     <build-runners>
       <runner id="RUNNER_2" name="Build and Deploy" type="simpleRunner">
         <parameters>
-          <param name="script.content" value="call build_and_deploy_website.bat %AzurePublishProfile% %AzurePublishPassword%" />
+          <param name="script.content" value="call build_and_deploy_website.bat %%AzurePublishProfile%% %%AzurePublishPassword%%" />
           <param name="teamcity.build.workingDir" value="_deploy" />
           <param name="teamcity.step.mode" value="default" />
           <param name="use.custom.script" value="true" />
