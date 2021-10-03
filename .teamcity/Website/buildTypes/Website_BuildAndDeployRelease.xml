@@ -4,6 +4,7 @@
   <description>Build and Deploy of Stride Website from release to http://stride3d.net</description>
   <settings>
     <parameters>
+      <param name="AzurePublishPassword" value="credentialsJSON:ca50f1d8-904d-4bf0-88f5-cb095f92aacd" spec="password display='prompt'" />
       <param name="AzurePublishProfile" value="stride-website.PublishSettings" />
     </parameters>
     <build-runners>
