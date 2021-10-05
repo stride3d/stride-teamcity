@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="6f657949-a453-49d2-9432-9dd3a2122477" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2020.1/project-config.xsd">
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="6f657949-a453-49d2-9432-9dd3a2122477" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2021.1/project-config.xsd">
   <name>Windows - Vulkan - NVIDIA GTX 960</name>
   <description />
   <settings ref="Engine_Tests_WindowsTestsTemplate">

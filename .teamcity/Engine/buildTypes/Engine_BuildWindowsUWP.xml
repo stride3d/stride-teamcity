@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="1d285734-67dd-457d-a0b6-027080809e3b" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2020.1/project-config.xsd">
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="1d285734-67dd-457d-a0b6-027080809e3b" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2021.1/project-config.xsd">
   <name>Build Windows UWP</name>
   <description />
   <settings ref="Engine_BuildRuntimeFromSourceTemplate">
     <parameters>
       <param name="RuntimeBuildTarget" value="UWP" />
     </parameters>
-    <build-runners order="RUNNER_7, RUNNER_47" />
+    <build-runners order="RUNNER_7" />
     <vcs-settings />
     <requirements />
     <build-triggers />

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="f36e61c8-a5e7-4c00-bc82-c57518573532" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2020.1/project-config.xsd">
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="f36e61c8-a5e7-4c00-bc82-c57518573532" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2021.1/project-config.xsd">
   <name>Build Windows OpenGL ES</name>
   <description />
   <settings ref="Engine_BuildRuntimeFromSourceTemplate">
     <parameters>
       <param name="RuntimeBuildTarget" value="WindowsOpenGLES" />
     </parameters>
-    <build-runners order="RUNNER_7, RUNNER_47" />
+    <build-runners order="RUNNER_7" />
     <vcs-settings />
     <requirements />
     <build-triggers />

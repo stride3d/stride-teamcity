@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="9bfacc01-0e46-433b-ab99-e8cb41aea6da" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2020.1/project-config.xsd">
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="9bfacc01-0e46-433b-ab99-e8cb41aea6da" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2021.1/project-config.xsd">
   <name>Build iOS</name>
   <description />
   <settings ref="Engine_BuildRuntimeFromSourceTemplate">
     <parameters>
       <param name="RuntimeBuildTarget" value="iOS" />
     </parameters>
-    <build-runners order="RUNNER_7, RUNNER_47" />
+    <build-runners order="RUNNER_7" />
     <vcs-settings />
     <requirements />
     <build-triggers />
