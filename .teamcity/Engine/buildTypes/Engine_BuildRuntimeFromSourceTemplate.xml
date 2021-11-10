@@ -11,30 +11,15 @@
       <param name="env.StrideDisableAssetCompilerExecServerProxy" value="true" />
     </parameters>
     <build-runners>
-      <runner id="RUNNER_7" name="Build Runtime" type="MSBuild">
+      <runner id="RUNNER_7" name="Build Runtime" type="dotnet">
         <parameters>
-          <param name="build-file-path" value="build\Stride.build" />
-          <param name="dotNetCoverage.NCover.HTMLReport.File.Sort" value="0" />
-          <param name="dotNetCoverage.NCover.HTMLReport.File.Type" value="1" />
-          <param name="dotNetCoverage.NCover.Reg" value="selected" />
-          <param name="dotNetCoverage.NCover.platformBitness" value="x86" />
-          <param name="dotNetCoverage.NCover.platformVersion" value="v2.0" />
-          <param name="dotNetCoverage.NCover3.Reg" value="selected" />
-          <param name="dotNetCoverage.NCover3.args" value="//ias .*" />
-          <param name="dotNetCoverage.NCover3.platformBitness" value="x86" />
-          <param name="dotNetCoverage.NCover3.platformVersion" value="v2.0" />
-          <param name="dotNetCoverage.NCover3.reporter.executable.args" value="//or FullCoverageReport:Html:{teamcity.report.path}" />
-          <param name="dotNetCoverage.PartCover.Reg" value="selected" />
-          <param name="dotNetCoverage.PartCover.includes" value="[*]*" />
-          <param name="dotNetCoverage.PartCover.platformBitness" value="x86" />
-          <param name="dotNetCoverage.PartCover.platformVersion" value="v2.0" />
+          <param name="args" value="/m /nr:false /p:StrideSkipUnitTests=true /p:StrideEnableCodeAnalysis=true" />
+          <param name="command" value="msbuild" />
           <param name="dotNetCoverage.dotCover.home.path" value="%teamcity.tool.JetBrains.dotCover.CommandLineTools.DEFAULT%" />
-          <param name="msbuild_version" value="16.0" />
-          <param name="run-platform" value="x86" />
-          <param name="runnerArgs" value="/m /nr:false /p:StrideSkipUnitTests=true /p:StrideEnableCodeAnalysis=true" />
+          <param name="msbuild.version" value="MSBuild_17_Windows" />
+          <param name="paths" value="build\Stride.build" />
           <param name="targets" value="Build%RuntimeBuildTarget%" />
           <param name="teamcity.step.mode" value="default" />
-          <param name="toolsVersion" value="Current" />
         </parameters>
       </runner>
     </build-runners>
