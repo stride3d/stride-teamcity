@@ -8,9 +8,6 @@
       <option name="buildConfigurationType" value="DEPLOYMENT" />
       <option name="maximumNumberOfBuilds" value="1" />
     </options>
-    <disabled-settings>
-      <setting-ref ref="RUNNER_44" />
-    </disabled-settings>
     <parameters>
       <param name="AzurePublishPassword" value="credentialsJSON:3cab913f-8023-41cb-82f7-91164e921ecb" spec="password display='prompt'" />
       <param name="AzurePublishProfile" value="stride-doc.PublishSettings" />
@@ -25,12 +22,6 @@
           <param name="jetbrains_powershell_script_file" value="build/deploy.ps1" />
           <param name="jetbrains_powershell_script_mode" value="FILE" />
           <param name="teamcity.build.workingDir" value="build" />
-          <param name="teamcity.step.mode" value="default" />
-        </parameters>
-      </runner>
-      <runner id="RUNNER_44" name="" type="PurgeStackPathCache">
-        <parameters>
-          <param name="StackPathApiKeySecret" value="credentialsJSON:d7c950ce-f8a3-46aa-9751-56aba12ea1d8" />
           <param name="teamcity.step.mode" value="default" />
         </parameters>
       </runner>
