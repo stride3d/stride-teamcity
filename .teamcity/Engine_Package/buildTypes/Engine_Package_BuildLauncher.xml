@@ -13,7 +13,7 @@
       <param name="CustomInstaller" value="" spec="text validationMode='any'" />
       <param name="CustomInstallerStoreUrl" value="" spec="text validationMode='any'" />
       <param name="StrideSign" value="true" spec="checkbox display='normal' checkedValue='true' label='Code signing'" />
-      <param name="StrideSignSecret" value="credentialsJSON:7faa3737-83e4-4d2e-ae0e-c12989663b18" spec="password label='Code signing secret' display='prompt'" />
+      <param name="StrideSignSecret" value="credentialsJSON:8d1bdd11-776a-4c0e-b4e4-832ec6cc7a8a" spec="password label='Code signing secret' display='prompt'" />
       <param name="StrideSignUser" value="sc-stride@dotnetfoundation.org" spec="text display='normal' label='Code signing username' validationMode='any'" />
     </parameters>
     <build-runners>
