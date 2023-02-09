@@ -105,13 +105,6 @@
         <param name="total-work-time" value="" />
       </parameters>
     </extension>
-    <extension id="repository-nuget-Stride" type="PackageRepository">
-      <parameters>
-        <param name="description" value="" />
-        <param name="name" value="Stride" />
-        <param name="type" value="nuget" />
-      </parameters>
-    </extension>
   </project-extensions>
   <cleanup>
     <options>
