@@ -54,6 +54,11 @@
           <param name="vcsRootId" value="Stride" />
         </parameters>
       </extension>
+      <extension id="BUILD_EXT_11" type="NuGetPackagesIndexer">
+        <parameters>
+          <param name="feed" value="Engine_Package/Stride" />
+        </parameters>
+      </extension>
     </build-extensions>
     <cleanup>
       <policy type="daysAndBuilds" cleanup-level="ARTIFACTS">
