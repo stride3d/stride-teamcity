@@ -3,6 +3,9 @@
   <name>Build And Deploy - Staging (staging.stride3d.net)</name>
   <description>Build and Deploy of Stride Website from staging to http://staging.stride3d.net</description>
   <settings>
+    <disabled-settings>
+      <setting-ref ref="vcsTrigger" />
+    </disabled-settings>
     <parameters>
       <param name="AzurePublishPassword" value="credentialsJSON:47db6938-f5bf-4a9b-9177-11340d3cfbbf" spec="password display='hidden'" />
       <param name="env.WEBCONFIG_TRANSFORM" value="staging" />
