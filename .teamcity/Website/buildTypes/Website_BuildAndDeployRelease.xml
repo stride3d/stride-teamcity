@@ -3,6 +3,9 @@
   <name>Build And Deploy - Release (stride3d.net)</name>
   <description>Build and Deploy of Stride Website from release to http://stride3d.net</description>
   <settings>
+    <disabled-settings>
+      <setting-ref ref="vcsTrigger" />
+    </disabled-settings>
     <parameters>
       <param name="AzurePublishPassword" value="credentialsJSON:9137829b-f4fb-4ae0-ac44-96ee0623c0d4" spec="password display='normal'" />
       <param name="AzurePublishProfile" value="stride-website.PublishSettings" />
