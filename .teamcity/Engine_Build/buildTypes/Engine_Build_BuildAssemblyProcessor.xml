@@ -3,9 +3,7 @@
   <name>Build Assembly Processor</name>
   <description />
   <settings ref="Engine_BuildRuntimeFromSourceTemplate">
-    <parameters>
-      <param name="RuntimeBuildTarget" value="Windows" />
-    </parameters>
+    <parameters />
     <build-runners order="RUNNER_7">
       <runner id="RUNNER_7" name="Build Runtime" type="dotnet">
         <parameters>
