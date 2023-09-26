@@ -7,6 +7,7 @@
     <build-runners>
       <runner id="RUNNER_46" name="Build Assembly Processor" type="dotnet">
         <parameters>
+          <param name="args" value="/restore" />
           <param name="command" value="msbuild" />
           <param name="dotNetCoverage.dotCover.home.path" value="%teamcity.tool.JetBrains.dotCover.CommandLineTools.DEFAULT%" />
           <param name="msbuild.version" value="MSBuild_17_Windows" />
