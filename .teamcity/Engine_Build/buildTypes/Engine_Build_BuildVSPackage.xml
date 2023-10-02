@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="2eece6fe-d4a9-4b21-8007-33e5a62ce123" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2021.1/project-config.xsd">
+  <name>Build Visual Studio Package</name>
+  <description />
+  <settings ref="Engine_BuildRuntimeFromSourceTemplate">
+    <parameters />
+    <build-runners order="RUNNER_7">
+      <runner id="RUNNER_7" name="Build Runtime" type="dotnet">
+        <parameters>
+          <param name="args" value="/m /nr:false /p:StrideSkipUnitTests=true /p:StrideEnableCodeAnalysis=true /restore" />
+          <param name="command" value="msbuild" />
+          <param name="dotNetCoverage.dotCover.home.path" value="%teamcity.tool.JetBrains.dotCover.CommandLineTools.DEFAULT%" />
+          <param name="msbuild.version" value="MSBuild_17_Windows" />
+          <param name="paths" value="build\Stride.AssemblyProcessor.sln" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+
