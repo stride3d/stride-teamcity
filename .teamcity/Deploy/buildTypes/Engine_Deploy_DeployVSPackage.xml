@@ -57,13 +57,13 @@
       </extension>
     </build-extensions>
     <artifact-dependencies>
-      <dependency id="ARTIFACT_DEPENDENCY_1" sourceBuildTypeId="Engine_Package_BuildPackage" cleanDestination="true">
+      <dependency id="ARTIFACT_DEPENDENCY_1" sourceBuildTypeId="Package_BuildPackage" cleanDestination="true">
         <revisionRule name="sameChainOrLastFinished" revision="latest.sameChainOrLastFinished" />
         <artifact sourcePath="**/*.* =&gt; ." />
       </dependency>
     </artifact-dependencies>
     <dependencies>
-      <depend-on sourceBuildTypeId="Engine_Package_BuildPackage">
+      <depend-on sourceBuildTypeId="Package_BuildPackage">
         <options>
           <option name="take-started-build-with-same-revisions" value="true" />
           <option name="take-successful-builds-only" value="true" />

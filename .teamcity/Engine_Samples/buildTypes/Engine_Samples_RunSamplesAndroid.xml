@@ -123,7 +123,7 @@ Invoke-WebRequest -Uri http://XXX/teamcity_upload.php -Method POST -Body $params
     <requirements />
     <build-triggers />
     <artifact-dependencies>
-      <dependency id="ARTIFACT_DEPENDENCY_7" sourceBuildTypeId="Engine_Package_BuildPackage" cleanDestination="true">
+      <dependency id="ARTIFACT_DEPENDENCY_7" sourceBuildTypeId="Package_BuildPackage" cleanDestination="true">
         <revisionRule name="sameChainOrLastFinished" revision="latest.sameChainOrLastFinished" />
         <artifact sourcePath="build\Stride.*.nupkg!** =&gt; .&#xD;&#xA;Windows-Direct3D11-Extra.zip!** =&gt; ." />
       </dependency>
@@ -133,7 +133,7 @@ Invoke-WebRequest -Uri http://XXX/teamcity_upload.php -Method POST -Body $params
       </dependency>
     </artifact-dependencies>
     <dependencies>
-      <depend-on sourceBuildTypeId="Engine_Package_BuildPackage">
+      <depend-on sourceBuildTypeId="Package_BuildPackage">
         <options>
           <option name="take-started-build-with-same-revisions" value="true" />
           <option name="take-successful-builds-only" value="true" />

@@ -25,13 +25,13 @@
     <requirements />
     <build-triggers />
     <artifact-dependencies>
-      <dependency id="ARTIFACT_DEPENDENCY_3" sourceBuildTypeId="Engine_Package_BuildPackage" cleanDestination="false">
+      <dependency id="ARTIFACT_DEPENDENCY_3" sourceBuildTypeId="Package_BuildPackage" cleanDestination="false">
         <revisionRule name="sameChainOrLastFinished" revision="latest.sameChainOrLastFinished" />
         <artifact sourcePath="build\Stride.*.nupkg!** =&gt; ." />
       </dependency>
     </artifact-dependencies>
     <dependencies>
-      <depend-on sourceBuildTypeId="Engine_Package_BuildPackage">
+      <depend-on sourceBuildTypeId="Package_BuildPackage">
         <options>
           <option name="take-started-build-with-same-revisions" value="true" />
           <option name="take-successful-builds-only" value="true" />
