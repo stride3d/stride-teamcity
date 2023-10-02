@@ -3,7 +3,7 @@
   <name>Deploy</name>
   <parameters>
     <param name="StrideStoreApiKey" value="credentialsJSON:7478961c-3231-4411-a27d-0dc15819a907" spec="password label='NuGet Server API Key'" />
-    <param name="StrideStoreUrl" value="https://api.nuget.org/v3/index.json" spec="text label='NuGet Server Push URL' validationMode='any' display='prompt'" />
+    <param name="StrideStoreUrl" value="https://api.nuget.org/v3/index.json" spec="text label='NuGet Server Push URL' validationMode='any'" />
   </parameters>
   <cleanup />
 </project>
