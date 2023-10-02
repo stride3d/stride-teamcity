@@ -111,6 +111,6 @@
       <option name="preventDependenciesArtifactsFromCleanup" value="false" />
     </options>
   </cleanup>
-  <subprojectsOrder order="Engine,Documentation,Website" />
+  <subprojectsOrder order="Engine,Documentation,Website,Package,Engine_Deploy" />
 </project>
 
