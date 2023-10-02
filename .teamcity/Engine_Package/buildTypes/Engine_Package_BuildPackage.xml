@@ -15,7 +15,7 @@
       <param name="StrideGraphicsApiDependentBuildAll" value="true" spec="checkbox label='Build all graphics platforms' uncheckedValue='false' display='normal' checkedValue='true'" />
       <param name="StridePlatforms" value="Windows;Android;iOS;Linux;macOS" spec="select data_6='macOS' data_5='Linux' display='normal' multiple='true' valueSeparator=';' label='Platforms' data_2='UWP' data_1='Windows' data_4='Android' data_3='iOS'" />
       <param name="StrideSign" value="true" spec="checkbox label='Code signing' display='normal' checkedValue='true'" />
-      <param name="StrideSignSecret" value="credentialsJSON:8d1bdd11-776a-4c0e-b4e4-832ec6cc7a8a" spec="password label='Code signing secret' display='prompt'" />
+      <param name="StrideSignSecret" value="credentialsJSON:5ce8a9f2-644e-4a91-97c9-4215ec1c2a3e" spec="password label='Code signing secret'" />
       <param name="StrideSignUser" value="sc-stride@dotnetfoundation.org" spec="text display='normal' label='Code signing username' validationMode='any'" />
       <param name="env.NUGET_CREDENTIALPROVIDERS_PATH" value="%teamcity.agent.home.dir%\plugins\nuget-agent\bin\credential-plugin\net6.0\CredentialProvider.TeamCity.dll" />
     </parameters>
