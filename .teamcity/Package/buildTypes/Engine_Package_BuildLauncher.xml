@@ -13,7 +13,6 @@
       <param name="CustomInstaller" value="" spec="text validationMode='any'" />
       <param name="CustomInstallerStoreUrl" value="" spec="text validationMode='any'" />
       <param name="StrideSign" value="true" spec="checkbox display='normal' checkedValue='true' label='Code signing'" />
-      <param name="StrideSignUser" value="sc-stride@dotnetfoundation.org" spec="text display='normal' label='Code signing username' validationMode='any'" />
     </parameters>
     <build-runners>
       <runner id="RUNNER_12" name="" type="dotnet">
