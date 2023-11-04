@@ -11,6 +11,19 @@
         <param name="type" value="BuildReportTab" />
       </parameters>
     </extension>
+    <extension id="PROJECT_EXT_2" type="OAuthProvider">
+      <parameters>
+        <param name="connectionSubtype" value="gitHubApp" />
+        <param name="displayName" value="GitHub App" />
+        <param name="gitHubApp.appId" value="418945" />
+        <param name="gitHubApp.clientId" value="Iv1.84302baea1eb9cce" />
+        <param name="gitHubApp.ownerUrl" value="https://github.com/stride3d" />
+        <param name="providerType" value="GitHubApp" />
+        <param name="secure:gitHubApp.clientSecret" value="credentialsJSON:906f2789-a417-4029-b0ce-0cc5745759c8" />
+        <param name="secure:gitHubApp.privateKey" value="credentialsJSON:2b461ca7-f4ab-4655-a2b5-820e8752567d" />
+        <param name="secure:gitHubApp.webhookSecret" value="credentialsJSON:fac93624-c7c9-4b38-8204-99be7300b2ba" />
+      </parameters>
+    </extension>
     <extension id="PROJECT_EXT_3" type="versionedSettings">
       <parameters>
         <param name="buildSettings" value="PREFER_CURRENT" />
@@ -111,6 +124,6 @@
       <option name="preventDependenciesArtifactsFromCleanup" value="false" />
     </options>
   </cleanup>
-  <subprojectsOrder order="Engine,Documentation,Website,Package,Deploy" />
+  <subprojectsOrder order="Engine,Package,Deploy" />
 </project>
 
