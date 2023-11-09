@@ -137,6 +137,15 @@ sleep 2]]></param>
           <param name="xmlReportParsing.verboseOutput" value="true" />
         </parameters>
       </extension>
+      <extension id="BUILD_EXT_14" type="pullRequests">
+        <parameters>
+          <param name="authenticationType" value="token" />
+          <param name="filterAuthorRole" value="MEMBER" />
+          <param name="providerType" value="github" />
+          <param name="secure:accessToken" value="credentialsJSON:5771c15b-1e5f-49f1-9cb7-561fe3f4ee82" />
+          <param name="vcsRootId" value="Stride" />
+        </parameters>
+      </extension>
     </build-extensions>
     <cleanup />
   </settings>
