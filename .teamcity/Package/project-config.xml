@@ -2,9 +2,9 @@
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="fe695cf6-6b24-488e-bdf0-2afdfac1e87e" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2021.1/project-config.xsd">
   <name>Package</name>
   <parameters>
-    <param name="StrideSignCertificateName" value="Stride-SC" />
     <param name="StrideSignClientId" value="7b8182a7-eb33-49ac-a93a-9064c9aafe43" />
     <param name="StrideSignClientSecret" value="credentialsJSON:4cd6809a-ac5a-4fc4-a385-eeef6c6f2da8" spec="password display='normal'" />
+    <param name="StrideSignKeyVaultCertificate" value="Stride-SC" />
     <param name="StrideSignKeyVaultName" value="sc-stride-cd159bf6e7ac4f" spec="text validationMode='any' display='normal'" />
     <param name="StrideSignTenantId" value="16076fdc-fcc1-4a15-b1ca-32c9a255900e" spec="text display='normal'" />
   </parameters>
