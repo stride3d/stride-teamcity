@@ -3,6 +3,7 @@
   <name>Package</name>
   <parameters>
     <param name="StrideSignCertificateName" value="Stride-SC" />
+    <param name="StrideSignClientId" value="7b8182a7-eb33-49ac-a93a-9064c9aafe43" />
     <param name="StrideSignTenantId" value="credentialsJSON:7b5308f3-333c-4a54-863b-e0679480493e" spec="password display='normal'" />
     <param name="StrideSignVaultName" value="sc-stride-cd159bf6e7ac4f" spec="text validationMode='any' display='normal'" />
   </parameters>
