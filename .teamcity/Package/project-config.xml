@@ -3,7 +3,7 @@
   <name>Package</name>
   <parameters>
     <param name="StrideSignSecret" value="credentialsJSON:5ce8a9f2-644e-4a91-97c9-4215ec1c2a3e" spec="password label='Code signing secret' display='normal'" />
-    <param name="StrideSignTenantId" value="16076fdc-fcc1-4a15-b1ca-32c9a255900e" />
+    <param name="StrideSignTenantId" value="credentialsJSON:7b5308f3-333c-4a54-863b-e0679480493e" spec="password display='normal'" />
     <param name="StrideSignUser" value="sc-stride@dotnetfoundation.org" spec="text display='normal' label='Code signing username' validationMode='any'" />
   </parameters>
   <project-extensions>
