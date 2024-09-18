@@ -17,7 +17,7 @@
     <build-runners>
       <runner id="RUNNER_12" name="" type="dotnet">
         <parameters>
-          <param name="args" value="/nr:false /p:CustomInstaller=&quot;%CustomInstaller%&quot; /p:CustomInstallerStoreUrl=&quot;%CustomInstallerStoreUrl%&quot; /p:StrideSign=&quot;%StrideSign%&quot; /p:StrideSignUser=&quot;%StrideSignUser%&quot; /p:StrideSignSecret=&quot;%StrideSignSecret%&quot;" />
+          <param name="args" value="/nr:false /p:CustomInstaller=&quot;%CustomInstaller%&quot; /p:CustomInstallerStoreUrl=&quot;%CustomInstallerStoreUrl%&quot; /p:StrideSign=&quot;%StrideSign%&quot; /p:StrideSignTenantId=&quot;%StrideSignTenantId%&quot; /p:StrideSignClientId=&quot;%StrideSignClientId%&quot; /p:StrideSignClientSecret=&quot;%StrideSignClientSecret%&quot; /p:StrideSignVaultCertificate=&quot;%StrideSignVaultCertificate%&quot; /p:StrideSignVaultName=&quot;%StrideSignVaultName%&quot;" />
           <param name="command" value="msbuild" />
           <param name="dotNetCoverage.dotCover.home.path" value="%teamcity.tool.JetBrains.dotCover.CommandLineTools.DEFAULT%" />
           <param name="msbuild.version" value="MSBuild_17_Windows" />
