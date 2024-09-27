@@ -16,7 +16,6 @@
           <param name="paths" value="build\Stride.build" />
           <param name="targets" value="Build%RuntimeBuildTarget%" />
           <param name="teamcity.step.mode" value="default" />
-          <param name="verbosity" value="Diagnostic" />
         </parameters>
       </runner>
     </build-runners>
