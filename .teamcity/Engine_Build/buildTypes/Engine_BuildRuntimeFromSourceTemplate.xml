@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="42d76c50-11f8-469b-a73c-1ac5449722e9" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2021.1/project-config.xsd">
+<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="42d76c50-11f8-469b-a73c-1ac5449722e9" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2025.3/project-config.xsd">
   <name>Build Runtime from Source Template</name>
   <settings>
     <options>
@@ -26,7 +26,6 @@
     <vcs-settings>
       <vcs-entry-ref root-id="Stride_NoClean" />
     </vcs-settings>
-    <requirements />
     <build-triggers>
       <build-trigger id="vcsTrigger" type="vcsTrigger">
         <parameters>
@@ -52,11 +51,10 @@
           <param name="authenticationType" value="token" />
           <param name="filterAuthorRole" value="EVERYBODY" />
           <param name="providerType" value="github" />
-          <param name="secure:accessToken" value="credentialsJSON:6ae38a61-0947-4eed-8438-624b44c11a32" />
+          <param name="secure:accessToken" value="credentialsJSON:09288528-d07b-4631-a508-88e2f530d33c" />
         </parameters>
       </extension>
     </build-extensions>
-    <cleanup />
   </settings>
 </template>
 
