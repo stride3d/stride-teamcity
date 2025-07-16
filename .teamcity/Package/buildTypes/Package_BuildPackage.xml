@@ -61,7 +61,7 @@
           <param name="authenticationType" value="token" />
           <param name="filterAuthorRole" value="EVERYBODY" />
           <param name="providerType" value="github" />
-          <param name="secure:accessToken" value="credentialsJSON:0e7496e8-4926-4125-b0f8-2d590f4d140c" />
+          <param name="secure:accessToken" value="credentialsJSON:09288528-d07b-4631-a508-88e2f530d33c" />
         </parameters>
       </extension>
     </build-extensions>
