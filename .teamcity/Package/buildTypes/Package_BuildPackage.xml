@@ -62,7 +62,6 @@
           <param name="filterAuthorRole" value="EVERYBODY" />
           <param name="providerType" value="github" />
           <param name="secure:accessToken" value="credentialsJSON:0e7496e8-4926-4125-b0f8-2d590f4d140c" />
-          <param name="vcsRootId" value="Stride" />
         </parameters>
       </extension>
     </build-extensions>
