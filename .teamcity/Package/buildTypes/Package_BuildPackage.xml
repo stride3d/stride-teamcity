@@ -61,7 +61,7 @@
           <param name="authenticationType" value="token" />
           <param name="filterAuthorRole" value="EVERYBODY" />
           <param name="providerType" value="github" />
-          <param name="secure:accessToken" value="credentialsJSON:ec696a18-326b-4f14-a455-90a0753bb806" />
+          <param name="secure:accessToken" value="credentialsJSON:0e7496e8-4926-4125-b0f8-2d590f4d140c" />
           <param name="vcsRootId" value="Stride" />
         </parameters>
       </extension>
