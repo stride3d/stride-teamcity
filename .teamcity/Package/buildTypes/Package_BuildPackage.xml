@@ -25,7 +25,7 @@
           <param name="dotNetCoverage.dotCover.home.path" value="%teamcity.tool.JetBrains.dotCover.CommandLineTools.DEFAULT%" />
           <param name="msbuild.version" value="MSBuild_17_Windows" />
           <param name="paths" value="build\Stride.build" />
-          <param name="targets" value="VSIXPlugin" />
+          <param name="targets" value="BuildWindowsDirect3D11;SignPackage" />
           <param name="teamcity.step.mode" value="default" />
         </parameters>
       </runner>
