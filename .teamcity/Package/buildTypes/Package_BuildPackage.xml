@@ -27,6 +27,7 @@
           <param name="paths" value="build\Stride.build" />
           <param name="targets" value="BuildWindowsDirect3D11;SignPackage" />
           <param name="teamcity.step.mode" value="default" />
+          <param name="verbosity" value="Diagnostic" />
         </parameters>
       </runner>
     </build-runners>
