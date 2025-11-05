@@ -4,7 +4,7 @@
   <description />
   <settings>
     <options>
-      <option name="artifactRules" value="build/.nuget/NuGet.exe =&gt; build/.nuget&#xA;bin/launcher/*.nupkg =&gt; bin/launcher&#xA;bin/launcher/StrideSetup*.exe =&gt; bin/launcher&#xA;build/Stride.build =&gt; build" />
+      <option name="artifactRules" value="build/.nuget/NuGet.exe =&gt; build/.nuget&#xA;bin/launcher/*.nupkg =&gt; bin/launcher&#xA;bin/launcher/StrideSetup*.exe =&gt; bin/launcher&#xA;build/Stride.build =&gt; build&#xA;msbuild.binlog" />
     </options>
     <disabled-settings>
       <setting-ref ref="vcsTrigger" />
