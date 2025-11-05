@@ -26,7 +26,7 @@ sleep 2]]></param>
       </runner>
       <runner id="RUNNER_8" name="" type="dotnet">
         <parameters>
-          <param name="args" value="/nr:false /p:StrideTestCategories=%TestCategories% /p:StrideGraphicsApis=&quot;%StrideGraphicsApis%&quot; /p:StrideGraphicsApisTest=&quot;%StrideGraphicsApisTest%&quot;" />
+          <param name="args" value="/bl /nr:false /p:StrideTestCategories=%TestCategories% /p:StrideGraphicsApis=&quot;%StrideGraphicsApis%&quot; /p:StrideGraphicsApisTest=&quot;%StrideGraphicsApisTest%&quot;" />
           <param name="command" value="msbuild" />
           <param name="dotNetCoverage.dotCover.home.path" value="%teamcity.tool.JetBrains.dotCover.CommandLineTools.DEFAULT%" />
           <param name="msbuild.version" value="MSBuild_17_Windows" />
