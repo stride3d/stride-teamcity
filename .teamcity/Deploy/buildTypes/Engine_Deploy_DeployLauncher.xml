@@ -24,7 +24,7 @@
           <param name="args" value="/p:StrideStoreUrl=%StrideStoreUrl% /p:StrideStoreApiKey=%StrideStoreApiKey%" />
           <param name="command" value="msbuild" />
           <param name="dotNetCoverage.dotCover.home.path" value="%teamcity.tool.JetBrains.dotCover.CommandLineTools.DEFAULT%" />
-          <param name="msbuild.version" value="MSBuild_17_Windows" />
+          <param name="msbuild.version" value="MSBuild_18_Windows" />
           <param name="targets" value="PublishLauncher" />
           <param name="teamcity.step.mode" value="default" />
         </parameters>
