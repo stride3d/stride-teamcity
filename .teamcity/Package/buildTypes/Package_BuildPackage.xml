@@ -23,7 +23,7 @@
           <param name="args" value="/bl /m /nr:false /p:StridePlatforms=&quot;%StridePlatforms%&quot; /p:StrideGraphicsApiDependentBuildAll=%StrideGraphicsApiDependentBuildAll% /p:StrideEditorTargetFrameworks=&quot;%StrideEditorTargetFrameworks%&quot; /p:StrideSign=&quot;%StrideSign%&quot; /p:StrideSignTenantId=&quot;%StrideSignTenantId%&quot; /p:StrideSignClientId=&quot;%StrideSignClientId%&quot; /p:StrideSignClientSecret=&quot;%StrideSignClientSecret%&quot; /p:StrideSignKeyVaultCertificate=&quot;%StrideSignKeyVaultCertificate%&quot; /p:StrideSignKeyVaultName=&quot;%StrideSignKeyVaultName%&quot;" />
           <param name="command" value="msbuild" />
           <param name="dotNetCoverage.dotCover.home.path" value="%teamcity.tool.JetBrains.dotCover.CommandLineTools.DEFAULT%" />
-          <param name="msbuild.version" value="MSBuild_17_Windows" />
+          <param name="msbuild.version" value="MSBuild_18_Windows" />
           <param name="paths" value="build\Stride.build" />
           <param name="targets" value="Package" />
           <param name="teamcity.step.mode" value="default" />
@@ -68,6 +68,7 @@
     <cleanup>
       <policy type="daysAndBuilds" cleanup-level="ARTIFACTS">
         <parameters>
+          <param name="artifactPatterns" value="+:**/*" />
           <param name="keepBuilds.count" value="10" />
           <param name="keepDays.count" value="3" />
         </parameters>
