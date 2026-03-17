@@ -12,7 +12,7 @@
           <param name="args" value="/m /nr:false /p:StrideSkipUnitTests=true /p:StrideEnableCodeAnalysis=true" />
           <param name="command" value="msbuild" />
           <param name="dotNetCoverage.dotCover.home.path" value="%teamcity.tool.JetBrains.dotCover.CommandLineTools.DEFAULT%" />
-          <param name="msbuild.version" value="MSBuild_17_Windows" />
+          <param name="msbuild.version" value="MSBuild_18_Windows" />
           <param name="paths" value="build\Stride.build" />
           <param name="targets" value="Build%RuntimeBuildTarget%" />
           <param name="teamcity.step.mode" value="default" />
