@@ -3,6 +3,9 @@
   <name>Build Android</name>
   <description />
   <settings ref="Engine_BuildRuntimeFromSourceTemplate">
+    <disabled-settings>
+      <setting-ref ref="vcsTrigger" />
+    </disabled-settings>
     <parameters>
       <param name="RuntimeBuildTarget" value="Android" />
     </parameters>
