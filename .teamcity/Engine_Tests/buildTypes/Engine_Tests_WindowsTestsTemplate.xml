@@ -7,6 +7,9 @@
       <option name="artifactRules" value="build\TestResults =&gt; TestResults&#xA;tests\local =&gt; local&#xA;msbuild.binlog" />
       <option name="executionTimeoutMin" value="30" />
     </options>
+    <disabled-settings>
+      <setting-ref ref="vcsTrigger" />
+    </disabled-settings>
     <parameters>
       <param name="env.STRIDE_BUILD_NUMBER" value="%build.number%" />
       <param name="env.STRIDE_TESTS_CAPTURE_RENDERDOC_ON_ERROR" value="" spec="checkbox display='normal' checkedValue='true'" />
